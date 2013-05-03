@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Today's Campus - jobs</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/assets/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="/assets/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="/assets/style.css" type="text/css" media="all">
+		
+     <!-- datepicker scripts-->   
+        <link rel="stylesheet" href="/assets/reset.css" type="text/css">
+        <link rel="stylesheet" href="/assets/zebra_datepicker.css" type="text/css">
+        <link rel="stylesheet" href="/assets/date-picker.css" type="text/css">
+        <script type="text/javascript" src="/assets/jquery-1.8.2.js"></script>
+        <script type="text/javascript" src="/assets/zebra_datepicker.js"></script>
+        <script type="text/javascript" src="/assets/functions.js"></script>
+
+	<!-- datepicker scripts -->
+
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="/assets/html5.js"></script>
+	<style type="text/css">
+		.box1 figure {behavior:url(js/PIE.htc)}
+	</style>
+<![endif]-->
+
+<!-- IE6 "fix" for the close png image -->
+<!--[if lt IE 7]>
+<link type='text/css' href='/assets/basic_ie.css' rel='stylesheet' media='screen' />
+<![endif]-->
+</head>
+<body>
+
+<!-- top -->
+	<div class="top-sub-wrap">
+    	<div class="top-main">Covering the people, Campuses & Companies making Business news in Higher Education</div>
+    </div>
+<!-- top end-->
+<div class="clear"></div>
+<div class="main-wrap">
+	<div class="main">
+<!-- header -->
+		<%= render "layouts/header"%>
+<!-- / header -->
+<!-- content -->
+		<article id="content">
+        <div class="ad-wrap">
+        	<img src="/assets/top_banner.jpg" alt="banner">
+        </div>
+             
+             <div class="content-wrapper">
+            	<div class="center-left">
+                <h2 class="register-emp" style="margin:0">Post a new job</h2>
+                <div class="registration-wrap-emp">
+ 					<form>
+                        	
+                            <div class="label-wrap-emp">
+                            	<label style="width:auto">Institution<span class="required">*</span></label><br>
+                                <input type="text" class="width250">
+                             </div>
+                            <div class="emp-tips">Enter a bit of your institution name to find it in our drop down menu, then choose the name from the menu. This will ensure appropriate pricing is applied. If your institution name is not recognized, please type in the complete name and tab out of the field.</div>
+                           
+                           
+                            <div class="credit-wrap">
+                            <p style="width:600px; padding:0 10px 0 10px; text-align:center;" class="credit-txt">Etiam id mauris velit. Aliquam luctus iaculis arcu, eget lacinia metus tempor sed. Mauris dictum risus vitae odio semper porttitor. Cras id metus sit amet nibh mattis tincidunt. In nisl sem, vulputate et sodales sollicitudin, imperdiet non eros. Donec venenatis felis ipsum, nec mattis odio. Donec lectus elit, iaculis vel pretium eu, convallis in turpis.<br><a href="#">Click to learn more before you post your job.</a></p>
+                            </div>
+                            <div class="search-txt5">Posting Information</div>
+                            <div class="search-box1 backgroundred">
+                            	<div class="posting-wrap">
+                                	<p><b>Corporate & For-Profit Institutions</b></p>
+                                        
+                                     <table width="600" border="0" class="shopping-cart-table" cellspacing="0" cellpadding="0">
+  <tr class="border-tab">
+    <td width="120">Size</td>
+    <td width="120"> Quantity</td>
+    <td width="120">Cost</td>
+    <td width="120">Discount</td>
+    <td width="120">Cost per posting</td>
+  </tr>
+  <tr class="even">
+    <td>Single</td>
+    <td>1 post</td>
+    <td><input type="radio">$250</td>
+    <td>---</td>
+    <td>$250</td>
+  </tr>
+  <tr>
+    <tr class="even">
+    <td>Small Package</td>
+    <td>10 postings</td>
+    <td><input type="radio">$2000</td>
+    <td>20%</td>
+    <td>$200</td>
+  </tr>
+   <tr>
+    <tr class="even">
+    <td>Medium Package</td>
+    <td>25 postings</td>
+    <td><input type="radio">$3125</td>
+    <td>50%</td>
+    <td>$125</td>
+  </tr>
+  <tr>
+    <tr class="even">
+    <td>Large Package</td>
+    <td>50 postings</td>
+    <td><input type="radio">$4375</td>
+    <td>65%</td>
+    <td>$87.50</td>
+  </tr>
+  <tr>
+    <tr class="even">
+    <td>Unlimited Package</td>
+    <td>Unlimited</td>
+    <td><input type="radio">$5250</td>
+    <td>---</td>
+    <td>---</td>
+  </tr>
+</table>
+
+<p><b>Non-Profit Accredited Institutions</b></p>
+  <table width="600" border="0" class="shopping-cart-table" cellspacing="0" cellpadding="0">
+  <tr class="border-tab">
+    <td width="300">Size – # of FTE Employees (Based on IPED data)</td>
+    <td width="300">Quantity – Unlimited Annual Rate (12 months)</td>
+  </tr>
+   <tr>
+    <tr class="even">
+    <td>Single – 30-day posting</td>
+    <td><input type="radio">$250</td>
+  </tr>
+  <tr>
+    <tr class="even">
+    <td>1 – 499 FTE unlimited package</td>
+    <td><input type="radio">$2625</td>
+  </tr>
+   <tr>
+    <tr class="even">
+    <td>500 – 999 FTE unlimited package</td>
+    <td><input type="radio">$3750</td>
+  </tr>
+  <tr>
+    <tr class="even">
+    <td>1000+ FTE unlimited package</td>
+    <td><input type="radio">$4875</td>
+  </tr>
+  </table>
+  
+  <p><b>Enhanced Recruitment Services</b></p>
+  <table width="600" border="0" class="shopping-cart-table" cellspacing="0" cellpadding="0">
+  <tr class="border-tab">
+    <td width="120">Advertising</td>
+    <td width="180">Size</td>
+    <td width="90">Placement</td>
+    <td width="160">Cost</td>
+  </tr>
+  <tr class="even">
+    <td>Banner</td>
+    <td>300x250</td>
+    <td>Jobs Board</td>
+    <td><input type="radio">$250/month</td>
+  </tr>
+  <tr class="even">
+    <td>Banner</td>
+    <td>300x600</td>
+    <td>Jobs Board</td>
+    <td><input type="radio">$475/month</td>
+  </tr> 
+  <tr class="even">
+    <td>Banner</td>
+    <td>300x250</td>
+    <td>Jobs Newsletter</td>
+    <td><input type="radio">$300/blast</td>
+  </tr>
+  <tr class="even">
+    <td>Email Announcement</td>
+    <td>Customized list by position and/or geographic location</td>
+    <td>Targeted Email</td>
+    <td><input type="radio">$0.10/Record ($250 min)</td>
+  </tr>
+  </table>
+                                        
+                                        <div class="clear"></div>
+                                        <div class="posting-left" style="margin:20px 0 0 0;">
+                                        	 <div class="posting-label">
+                                            <label>From date</label>
+                                            <form action="javascript:void(0)" method="post">
+                                                <div><input id="datepicker-example9" type="text"></div>
+                                             </form>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="posting-left" style="margin:20px 0 0 0;">
+                                            <div class="posting-label">
+                                            <label>To date</label>
+                                            <form action="javascript:void(0)" method="post">
+                                                <div><input id="datepicker-example99" type="text"></div>
+                                             </form>
+                                            </div>
+                                        </div>
+                                      
+                                  <div class="clear"></div> 
+                                </div>
+                            </div>
+                          </form>
+                          
+                          <div class="search-txt6">Job Location</div>
+                            <div class="search-box1 backgroundred">
+                            <form>
+                        		<div class="label-wrap-emp-post">
+                                    <label>Country<span class="required">*</span></label>
+                                    <select class="form-select-locate"><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="VG">British Virgin Islands</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos (Keeling) Islands</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo (Brazzaville)</option><option value="CD">Congo (Kinshasa)</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territories</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard Island and McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong S.A.R., China</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="CI">Ivory Coast</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macao S.A.R., China</option><option value="MK">Macedonia</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="AN">Dutch Caribbean</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MP">Northern Mariana Islands</option><option value="KP">North Korea</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestinian Territory</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="BL">Saint Barthélemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="MF">Saint Martin (French part)</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia and the South Sandwich Islands</option><option value="KR">South Korea</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TL">Timor-Leste</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="VI">U.S. Virgin Islands</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option selected="selected" value="US">United States</option><option value="UM">United States Minor Outlying Islands</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option><option value="XX">Global</option><option value="XK">Republic of Kosovo</option></select>
+                                 </div>
+                                 <div class="label-wrap-emp-post">
+                                    <label>City<span class="required">*</span></label>
+                                    <input type="text">
+                                  </div>
+                                  <div class="label-wrap-emp-post">
+                                    <label>State<span class="required">*</span></label>
+                                    <select class="form-select-locate"><option selected="selected" value="">--</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District Of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option><option value="AS">American Samoa</option><option value="FM">Federated States of Micronesia</option><option value="GU">Guam</option><option value="MH">Marshall Islands</option><option value="MP">Northern Mariana Islands</option><option value="PW">Palau</option><option value="PR">Puerto Rico</option><option value="VI">Virgin Islands</option></select>
+                                  </div>
+                                  <div class="label-wrap-emp-post">
+                                    <label>ZIP Code<span class="required">*</span></label>
+                                    <input type="text">
+                                  </div>
+                             </form>
+                            </div>
+                            
+                            
+                            <div class="search-txt6">Job Details<span class="required1">*</span></div>
+                            <div class="search-box1 backgroundred">
+                            <form>
+                        		<div class="label-wrap-emp-post">
+                                    <label>Title<span class="required">*</span></label>
+                                    <input type="text">
+                                 </div>
+                                 
+                                 <div class="label-wrap-emp-post">
+                                    <label>Body<span class="required">*</span></label>
+                                    <textarea rows="5" cols="60" class="textarea"></textarea>
+                                 </div>
+                                 <div class="credittext bottom10">Your summary will appear along with your job title and institution name in search results. Keep it short - 600 characters or less. If you don't include a summary, we'll display the first line or two of your description instead. Current length is 0.</div>
+                                 <div class="label-wrap-emp-post">
+                                    <label>Job Type<span class="required">*</span></label>
+                                    <select class="form-select-locate"><option value="_none">- Select a value -</option><option value="1010">Part time faculty</option><option value="1011">Postdocs</option><option value="24">Full Time staff</option><option value="818">Online/remote</option><option value="23">Part Time staff</option><option value="25">Temporary/contract positions</option><option value="819">Tenured/tenure track/full-time faculty</option><option value="1012">Other</option></select>
+                                  </div>
+                                  <div class="label-wrap-emp-post">
+                                    <label>Job Category<span class="required">*</span></label>
+                                    <select class="form-select" size="12" multiple="multiple"><option value="710">FACULTY JOBS</option><option value="743">-Career / Vocational Fields</option><option value="711">-Fine and Performing Arts</option><option value="712">-Humanities</option><option value="713">--Classics</option><option value="714">--English literature and composition</option><option value="715">--Ethnic / cultural / gender studies</option><option value="716">--History</option><option value="717">--Languages</option><option value="718">--Philosophy</option><option value="719">--Religion</option><option value="720">-Professions</option><option value="721">--Architecture</option><option value="722">--Business</option><option value="723">--Communication / design / media</option><option value="726">--Health professions</option><option value="724">--Law</option><option value="725">--Library science</option><option value="1002">--Public administration</option><option value="727">--Social work</option><option value="728">-Science / Engineering / Mathematics</option><option value="804">--Agricultural science / extension</option><option value="729">--Biology / life sciences</option><option value="730">--Chemistry / biochemistry</option><option value="731">--Computer Science / Information Technology</option><option value="732">--Engineering</option><option value="1003">--Environmental sciences</option><option value="733">--Mathematics</option><option value="734">--Physical sciences</option><option value="735">-Social Sciences / Education</option><option value="736">--Anthropology / Archaeology</option><option value="800">--Criminal justice</option><option value="737">--Economics</option><option value="738">--Education</option><option value="1004">--Geography</option><option value="1005">--Kinesiology / physical education</option><option value="739">--Linguistics</option><option value="740">--Political science</option><option value="741">--Psychology</option><option value="742">--Sociology / behavioral studies</option><option value="744">ADMINISTRATIVE JOBS</option><option value="766">-Student affairs / student services</option><option value="769">--Counseling</option><option value="767">--Residence life</option><option value="768">--Student activities</option><option value="1009">--Student services</option><option value="745">-Academic administration</option><option value="746">--Academic advising</option><option value="747">--Curriculum development</option><option value="1000">--Department chairs</option><option value="795">--Graduate Education</option><option value="748">--Grants / research administration</option><option value="749">--Instructional technology / distance education</option><option value="750">--International programs</option><option value="751">--Librarians</option><option value="752">--Publishing</option><option value="753">--Research staff / postdocs</option><option value="754">-Institutional administration</option><option value="1001">--Assessment</option><option value="755">--Admissions / registrar</option><option value="756">--Athletics</option><option value="757">--Business / financial management</option><option value="796">--Clerical/administrative support</option><option value="758">--Development / fund raising / alumni affairs</option><option value="797">--Diversity</option><option value="759">--Facilities / auxiliary services / sustainability</option><option value="760">--Financial aid</option><option value="7501">--Health services/medical</option><option value="761">--Human resources</option><option value="762">--Information systems / technology</option><option value="798">--Institutional research</option><option value="763">--Legal affairs</option><option value="764">--Marketing / public relations / government relations</option><option value="799">--Program administration</option><option value="765">--Safety and security</option><option value="770">EXECUTIVE POSITIONS</option><option value="771">-Chief executives / executive directors</option><option value="772">-Deans</option><option value="773">-Presidents / chancellors</option><option value="774">-Provosts / Vice Presidents</option><option value="775">JOBS OUTSIDE HIGHER EDUCATION</option><option value="776">-Consultants / businesses</option><option value="777">-Foundations</option><option value="778">-Government agencies</option><option value="779">-High schools</option><option value="780">-Literary and cultural organizations</option><option value="781">-Lobbying groups</option><option value="782">-Museums</option><option value="1006">-Non-profit organizations/associations</option><option value="801">-Public policy</option><option value="783">-Publishers</option></select>
+                                    <div class="credittext-left">To select more than one category, hold down the Ctrl key.</div>
+                                  </div>
+                                  
+                             </form>
+                             
+                            </div>
+ 
+ 							<div class="search-txt7">Applications Go To.<span class="required1">*</span></div>
+                                <div class="search-box1 backgroundred">
+                                <p>You must provide at least one option for receiving applications.</p>
+                                    <form>
+                                        <div class="label-wrap-emp-post">
+                                            <label>Email<span class="required">*</span></label>
+                                            <input type="text">
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>URL<span class="required">*</span></label>
+                                            <input type="text">
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>Country<span class="required">*</span></label>
+                                            <select class="form-select-locate"><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="VG">British Virgin Islands</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos (Keeling) Islands</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo (Brazzaville)</option><option value="CD">Congo (Kinshasa)</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territories</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard Island and McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong S.A.R., China</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="CI">Ivory Coast</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macao S.A.R., China</option><option value="MK">Macedonia</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="AN">Dutch Caribbean</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MP">Northern Mariana Islands</option><option value="KP">North Korea</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestinian Territory</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="BL">Saint Barthélemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="MF">Saint Martin (French part)</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia and the South Sandwich Islands</option><option value="KR">South Korea</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TL">Timor-Leste</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="VI">U.S. Virgin Islands</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option selected="selected" value="US">United States</option><option value="UM">United States Minor Outlying Islands</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option><option value="XX">Global</option><option value="XK">Republic of Kosovo</option></select>
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>Full name</label>
+                                            <input type="text">
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>Institution</label>
+                                            <input type="text">
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>Street</label>
+                                            <input type="text">
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>Street 2</label>
+                                            <input type="text">
+                                         </div>
+                                          <div class="label-wrap-emp-post">
+                                            <label>City</label>
+                                            <input type="text">
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>State</label>
+                                            <select class="form-select-locate"><option value="" selected="selected">--</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District Of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option><option value="AS">American Samoa</option><option value="FM">Federated States of Micronesia</option><option value="GU">Guam</option><option value="MH">Marshall Islands</option><option value="MP">Northern Mariana Islands</option><option value="PW">Palau</option><option value="PR">Puerto Rico</option><option value="VI">Virgin Islands</option></select>
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>ZIP Code</label>
+                                            <input type="text">
+                                         </div>
+                                     </form>
+                                 </div>
+   <input type="submit" value="Continue" style="width:72px; border:0; float:left;" class="btn2 right">
+   <input type="submit" value="Post Another Job" style="width:120px; border:0; float:left;" class="btn2 right">
+   <div class="clear"></div>
+   </div>             	
+ </div>
+ </div>
+ </article>
+               <div class="center-right">
+                    <div class="search-txt">Your Cart</div>
+                    <div class="box-info">
+                     <table width="275" border="1" class="cart-table">
+  <tr class="add">
+    <td>developer(Arizona State University)</td>
+    <td align="right">$250.00</td>
+  </tr>
+  <tr class="even">
+    <td>developer(Arizona State University)</td>
+    <td align="right">$250.00</td>
+  </tr>
+  <tr class="add">
+    <td>developer(Arizona State University)</td>
+    <td align="right">$250.00</td>
+  </tr>
+  <tr class="even">
+    <td>developer(Arizona State University)</td>
+    <td align="right">$250.00</td>
+  </tr>
+</table>
+<div class="cart-total">Total $1000.00</div>
+<div class="cart-wrap-bottom">
+<a href="after-login-shopping-cart.html" class="btn2" title="View Cart">View Cart</a>
+<a href="checkout.html" class="btn2" title="Checkout">Checkout</a>
+</div>
+                    </div>
+<div class="clear"></div>
+     <div class="search-txt1">Employer Tools</div>
+                    <div class="box-info">
+                    	<ul class="emp-tools">
+                        <li><a href="post-job.html">Post a new job</a></li>
+                        <li><a href="my-account.html">Manage your job posts</a></li>
+                        <li><a href="resume-search.html">Search résumés</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ad">
+                    	<img src="/assets/ad_right.jpg">
+                    </div>
+                    <div class="box-content1">
+                        	<h2>Financial Aid & Bursar</h2>
+                            <ul>
+                            <li>
+                            <h6>Awards Recognize Student Loan Default | Prevention And Financial Literacy Programs</h6>
+                            <p>INDIANAPOLIS - USA Funds® has announced the recipients of its 2012 Excellence in Debt Management Awards. <a href="#"> More</a></p>
+                           </li>
+                            <li>
+                            <h6>Tuition paid in ones</h6>
+                            <p>In a YouTube video Nicolaus Ramos, a U of Colorado student from Sacramento, explains why he paid his $14,309 tuition bill with 30 pounds of one-dollar bills. <a href="#"> More</a></p>
+                            </li>
+                            <li class="last">
+                            <h6>Heading off the college tab</h6>
+                            <p>Ken Clark, author of “The Complete Idiot’s Guide to Paying for College”, reduces how to pay for college to one simple rule: “Plan on putting away $75 per kid per month from the day they’re born, and that will get you four years at a state school.”<a href="#"> More</a></p>
+                           </li>
+                            </ul>
+                            </div>
+                            
+                            <div class="ad">
+                                <img src="/assets/ad_right1.jpg">
+                            </div>
+                            <div class="box-content1">
+                        	<h2>Student Loan Intelligence</h2>
+                          <ul>
+                            <li class="last">
+                            <h6>One common peculiarity among U.S. student loans</h6>
+                            <p>For all U.S. student loans - government and private - a borrower has no bankruptcy protection.<a href="#"> More</a></p>
+                            </li>
+                           </ul> 
+                        </div>
+               </div>
+               
+             </div>
+		</article>
+<!-- / content -->
+<div class="clear"></div>
+	</div>
+</div>
+    <!-- footer -->
+		<%= render "layouts/footer"%>
+<!-- / footer -->
+
+</body>
+</html>

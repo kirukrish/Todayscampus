@@ -1,0 +1,135 @@
+	<div class="center-left">
+                <div class="detail-view">
+                <h2>View Jobs</h2>
+                <a href="mailto:ramar@gmail.com" class="btn2">Apply For Job</a>
+                <a href="#" class="btn2">Print Job</a>
+                <a href="#" class="btn2">Save This Job</a>
+                <a href="jobs.html" class="btn2">Return to Job Search</a>
+                <span style="float:right; margin-top:5px;">
+                <a href="#" title="Facebook"><img src="/assets/facebook.png"></a>
+                <a href="#" title="Twitter"><img src="/assets/twitter.png"></a>
+                <a href="#" title="Linkedin"><img src="/assets/linkedin.png"></a>
+                <a href="#"><img src="/assets/google-icon.png"></a>
+                <a href="#" title="Email"><img src="/assets/email.png"></a>
+                </span>
+                </div>
+                <div class="accordionContent" style="margin:0px 0 0 0;">
+                <h2><%=@job.title%></h2>
+                <h4>State University of New York College at Brockport</h4>
+         <div><b>Job Location:</b><span><%=@job.job_location.job_city%>,<%=@job.job_location.state.name%></span></div>
+        <div><b>Job Category:</b><span><%=@job.job_category.name%></span></div>
+        <div><b>Posted:</b><span><%=@job.created_at.to_date.strftime("%B %d")%></span></div>
+				
+				<!-- not defined starts -->
+        <p>The College at Brockport values diversity in its faculty, staff, and students and strongly encourages applications from members of underrepresented minority groups.</p>
+        <p>AMENDED 3/14/2013</p>
+        <p>Assistant Librarian<br>Librarian, Reference & Instruction</p>
+				<!-- not defined ends-->
+				
+        <p>Description of Duties:</p>
+        <p><%=@job.description%></p>
+				
+				<!-- not defined starts -->
+        <p>Required Qualifications:</p>
+        <p>
+        <%=@job.required_qualification%>
+        </p>
+        <p>Preferred Qualifications:<br>
+        <%=@job.preferred_qualification%>
+        </p>
+        <p>The State University of New York is an Equal Opportunity/Affirmative Action Employer</p>
+        <p>Additional Notes to Applicants: <%=@job.additional_notes%></p>
+        </div>
+        <!-- not defined ends-->
+				
+            <div class="detail-view">
+                <a href="mailto:ramar@gmail.com" class="btn2">Apply For Job</a>
+                <a href="#" class="btn2">Print Job</a>
+                <a href="#" class="btn2">Save This Job</a>
+                <a href="jobs.html" class="btn2">Return to Job Search</a>
+                <span style="float:right; margin-top:5px;">
+                <a href="#" title="Facebook"><img src="/assets/facebook.png"></a>
+                <a href="#" title="Twitter"><img src="/assets/twitter.png"></a>
+                <a href="#" title="Linkedin"><img src="/assets/linkedin.png"></a>
+                <a href="#"><img src="/assets/google-icon.png"></a>
+                <a href="#" title="Email"><img src="/assets/email.png"></a>
+                </span>
+             </div>	
+               </div>
+		
+		
+		
+		<div class="center-right">
+                    <div class="search-txt">Your Cart</div>
+                    <div class="box-info">
+                     <table width="275" border="1" class="cart-table">
+  <tr class="add">
+    <td>developer(American Anthropological Association (AAA))</td>
+    <td align="right">$250.00</td>
+  </tr>
+  <tr class="even">
+    <td>developer(American Anthropological Association (AAA))</td>
+    <td align="right">$250.00</td>
+  </tr>
+  <tr class="add">
+    <td>developer(American Anthropological Association (AAA))</td>
+    <td align="right">$250.00</td>
+  </tr>
+  <tr class="even">
+    <td>developer(American Anthropological Association (AAA))</td>
+    <td align="right">$250.00</td>
+  </tr>
+</table>
+<div class="cart-total">Total $1000.00</div>
+<div class="cart-wrap-bottom">
+<a href="shopping-cart.html" class="btn2" title="View Cart">View Cart</a>
+<a href="checkout.html" class="btn2" title="Checkout">Checkout</a>
+</div>
+                    </div>
+<div class="clear"></div>
+     <div class="search-txt1">Employer Tools</div>
+                    <div class="box-info">
+                    	<ul class="emp-tools">
+                        <li><a href="post-job.html">Post a new job</a></li>
+                        <li><a href="my-account.html">Manage your job posts</a></li>
+                        <li><a href="resume-search.html">Search résumés</a></li>
+                        </ul>
+                    </div>
+                    <div class="ad">
+                    	<img src="/assets/ad_right.jpg">
+                    </div>
+                    <div class="box-content1">
+                        	<h2>Financial Aid & Bursar</h2>
+                            <ul>
+                            <li>
+                            <h6>Awards Recognize Student Loan Default | Prevention And Financial Literacy Programs</h6>
+                            <p>INDIANAPOLIS - USA Funds® has announced the recipients of its 2012 Excellence in Debt Management Awards. <a href="#"> More</a></p>
+                           </li>
+                            <li>
+                            <h6>Tuition paid in ones</h6>
+                            <p>In a YouTube video Nicolaus Ramos, a U of Colorado student from Sacramento, explains why he paid his $14,309 tuition bill with 30 pounds of one-dollar bills. <a href="#"> More</a></p>
+                            </li>
+                            <li class="last">
+                            <h6>Heading off the college tab</h6>
+                            <p>Ken Clark, author of “The Complete Idiot’s Guide to Paying for College”, reduces how to pay for college to one simple rule: “Plan on putting away $75 per kid per month from the day they’re born, and that will get you four years at a state school.”<a href="#"> More</a></p>
+                           </li>
+                            </ul>
+                            </div>
+                            
+                            <div class="ad">
+                                <img src="/assets/ad_right1.jpg">
+                            </div>
+                            <div class="box-content1">
+                        	<h2>Student Loan Intelligence</h2>
+                          <ul>
+                            <li class="last">
+                            <h6>One common peculiarity among U.S. student loans</h6>
+                            <p>For all U.S. student loans - government and private - a borrower has no bankruptcy protection.<a href="#"> More</a></p>
+                            </li>
+                           </ul> 
+                        </div>
+               </div>
+               
+            
+
+

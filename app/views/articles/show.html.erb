@@ -1,0 +1,52 @@
+
+            	<div class="center-left">
+                <div class="detail-view">
+                <h2>Article - <%=@article.category.name%></h2>
+                <!--<a href="mailto:ramar@gmail.com" class="btn2">Apply For Job</a>
+                <a href="#" class="btn2">Print Job</a>
+                <a href="#" class="btn2">Save This Job</a>
+                <a href="jobs.html" class="btn2">Return to Job Search</a> -->
+                <span style="float:right; margin-top:5px;">
+                <a href="#" title="Facebook"><img src="/assets/facebook.png"></a>
+                <a href="#" title="Twitter"><img src="/assets/twitter.png"></a>
+                <a href="#" title="Linkedin"><img src="/assets/linkedin.png"></a>
+                <a href="#"><img src="/assets/google-icon.png"></a>
+                <a href="#" title="Email"><img src="/assets/email.png"></a>
+                </span>
+                </div>
+                <div class="accordionContent" style="margin:0px 0 0 0;">
+                <h2><%==@article.title%></h2>
+                <h4> <%=@article.author_name%> </h4>
+        <div><b>Topics:</b><span><%=@article.topics.map(&:title).join(", ")%></span></div>
+        <div><b>Posted:</b><span><%=disp_us_format(@article.created_at)%></span></div>
+        <p> <%=raw @article.detail_description%></p>
+        </div>
+        
+            <div class="detail-view">
+                <!--<a href="mailto:ramar@gmail.com" class="btn2">Apply For Job</a>
+                <a href="#" class="btn2">Print Job</a>
+                <a href="#" class="btn2">Save This Job</a>
+                <a href="jobs.html" class="btn2">Return to Job Search</a>-->
+                <span style="float:right; margin-top:5px;">
+                <a href="#" title="Facebook"><img src="/assets/facebook.png"></a>
+                <a href="#" title="Twitter"><img src="/assets/twitter.png"></a>
+                <a href="#" title="Linkedin"><img src="/assets/linkedin.png"></a>
+                <a href="#"><img src="/assets/google-icon.png"></a>
+                <a href="#" title="Email"><img src="/assets/email.png"></a>
+                </span>
+             </div>	
+               </div>
+               <div class="center-right">
+								                    <div class="search-box">
+                    	<img class="find" src="/assets/find_job.png">
+                        <a href="#"><img src="/assets/post_job_btn.png"></a>
+                        <p>Browse 345 Jobs</p>
+                        <div class="search"><input type="text"> <input class="search-icon" type="button"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="ad">
+                    	<img src="/assets/ad_right.jpg">
+                    </div>
+								<%= render "articles/article_detail_sidebar", :article => @article, :similar_articles => @similar_articles, :topic => @topic %>
+               
+							 </div>

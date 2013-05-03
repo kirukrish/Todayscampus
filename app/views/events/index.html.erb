@@ -1,0 +1,111 @@
+          	<div class="center-left">
+                <h2 class="register-emp-cart">Events</h2>
+				<div class="date-wrap" style="height:10px;">
+						<form action="events" method="get">
+            <div class="date-left">
+            <label>From Date</label>
+            <input id="datepicker-example9" name ="from_date" type="text" value=<%=params[:from_date]%>>
+            <div id="container" style="margin: 10px 0 0 0"></div>
+            </div>
+                       
+            <div class="date-right">
+            <label>To Date</label>
+            <input id="datepicker-example99" name ="to_date" type="text" value=<%=params[:to_date]%>>
+						<input type="submit" name="Search" value="search"> 
+            <div id="container1" style="margin: 10px 0 0 0"></div>
+            </div>
+            </form>
+						
+					
+						
+            </div>
+            <div class="clear"></div>
+                <div class="pagination">
+                	<div id="demo1"><%= paginate @events %></div>                  
+             </div>
+         		<div id="wrapper">
+		
+		<% if @events .present?%>
+		<table width="650" border="0" class="rss-table webinarstable" cellspacing="0" cellpadding="0">
+  <tr class="border-tab">
+    <td width="250">Title</td>
+    <td width="50">Posted on</td>
+    <td width="350">Description</td>
+  </tr>
+	
+	<%@events .each do | event|%>
+		<tr class="<%=cycle("add" ,"even") %>">
+			<td><a href="<%=event.external_url%>"> <%=event.title%></a></td>
+			<td width="85px;"><%=disp_us_format(event.created_at)%></td>
+			<td><p><%= raw event.description%> 
+			 <br/>
+			 <b>Date :</b> <%=disp_betwen_format(event.event_from, event.event_to)%>
+			 <b>Fee :</b> $<%=event.event_fee%> <%=event.fee_for_per_workshop.present? ? "/ $ #{ event.fee_for_per_workshop} per workshop" : ""%>
+			<a class="btn2" href="<%=event.external_url%>">View More</a></p></td>
+		</tr>
+		</table>
+  <%end%>
+	<%else%>
+	<p> No records found</p>
+  <%end%>
+    
+ 
+	</div>	
+    <!--<div id="demo2"></div> -->
+               </div>
+               <div class="center-right">
+                    <div class="search-box">
+                        <span><a href="register-employer.html" class="btn-reg">Login</a></span><span style="color:#fff;">or</span>
+                        <span><a href="register-employer.html" class="btn-reg">Register</a></span>
+                    </div>
+                    <div class="clear height10"></div>
+                    <div class="search-box">
+                        <span class="hiring">Hiring?</span><a href="register-employer.html"><img src="/assets/post_job_btn.png"></a>
+                        <div class="learn-wrap">
+                        <a href="learn-more.html" class="learn">Learn More</a>
+                        <a href="rates.html" class="learn">Our Rates</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    
+                    <div class="ad">
+                    	<img src="/assets/ad_right.jpg">
+                    </div>
+                    <div class="box-content1">
+                        	<h2>Financial Aid & Bursar</h2>
+                            <ul>
+                            <li>
+                            <h6>Awards Recognize Student Loan Default | Prevention And Financial Literacy Programs</h6>
+                            <p>INDIANAPOLIS - USA Funds® has announced the recipients of its 2012 Excellence in Debt Management Awards. <a href="#"> More</a></p>
+                           </li>
+                            <li>
+                            <h6>Tuition paid in ones</h6>
+                            <p>In a YouTube video Nicolaus Ramos, a U of Colorado student from Sacramento, explains why he paid his $14,309 tuition bill with 30 pounds of one-dollar bills. <a href="#"> More</a></p>
+                            </li>
+                            <li class="last">
+                            <h6>Heading off the college tab</h6>
+                            <p>Ken Clark, author of “The Complete Idiot’s Guide to Paying for College”, reduces how to pay for college to one simple rule: “Plan on putting away $75 per kid per month from the day they’re born, and that will get you four years at a state school.”<a href="#"> More</a></p>
+                           </li>
+                            </ul>
+                            </div>
+                            
+                            <div class="ad">
+                                <img src="/assets/ad_right1.jpg">
+                            </div>
+                            <div class="box-content1">
+                        	<h2>Student Loan Intelligence</h2>
+                          <ul>
+                            <li class="last">
+                            <h6>One common peculiarity among U.S. student loans</h6>
+                            <p>For all U.S. student loans - government and private - a borrower has no bankruptcy protection.<a href="#"> More</a></p>
+                            </li>
+                           </ul> 
+                        </div>
+               </div>
+               
+             </div>
+		</article>
+<!-- / content -->
+<div class="clear"></div>
+	</div>
+	

@@ -1,0 +1,17 @@
+<div class="box-content1">
+<% if similar_articles.present?%>
+			<h2><%= topic ? "#{topic.title.capitalize} - Articles" : "Similar Articles"%></h2>
+				<ul>
+				<%similar_articles.each do  |article|%>
+				<li class="last">
+				<h6><%= link_to article.title, article_path(article.id),{:style=>'color:black;'}%></h6>
+				<p><%=raw article.brief_description%></p>
+				<%end%>
+			 </li>
+				</ul>
+		<%end%>
+		</div>
+				
+<div class="ad">
+		<img src="/assets/ad_right1.jpg">
+</div>

@@ -1,0 +1,107 @@
+<div class="center-left">
+<!-- slider -->
+<div class="slider">
+  <div class="flexslider">
+
+    <ul class="slides">
+      <li>
+        <img src="/assets/banner1.jpg" />
+        <div class="flex-caption">
+          <h3>The Concessioning Ka-Ching1</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <div><a class="more" href="#">More</a></div>
+        </div>
+      </li>
+      <li>
+        <img src="/assets/banner2.jpg" />
+        <div class="flex-caption">
+          <h3>The Concessioning Ka-Ching2</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <div><a class="more" href="#">More</a></div>
+        </div>
+      </li>
+      <li>
+        <img src="/assets/banner3.jpg" />
+        <div class="flex-caption">
+          <h3>The Concessioning Ka-Ching3</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <div><a class="more" href="#">More</a></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- slider end-->
+<div class="clear"></div>
+<div class="center-inner-left">
+<!--
+  <div class="box-content">
+    <h2>News</h2>
+    <ul>
+      <li>Ellucian Previews New Mobile Solution — An Ellucian XE Product Evolution <a href="#">More</a></li>
+      <li>Educause Annual Conference Seeks Answers to “Disruptive” Challenges Facing Higher Education<a href="#">More</a></li>
+      <li>Hobsons’ AppReview Simplifies College Application Review Process<a href="#">More</a></li>
+      <li class="last">DuPont and Cold Spring Harbor Cutting-Edge Plant Biology Research for Another Five Years<a href="#">More</a></li>
+    </ul>
+  </div>
+	-->
+	
+	<% if @articles1.present?%>
+	<%@articles1.each do |group_article|%>
+		<div class="box-content">
+		
+			<h2><%=group_article[0].category.name.titleize%></h2>
+			<!--<img src="/assets/article_img1.png" alt="article img">-->
+			<ul>
+				
+				<% group_article.each_with_index do |article, index|%>
+				<li class= <%=group_article.length == index + 1 ? "last" : "" %>>
+				<!--<img src="/assets/article_img1.png" alt="article img" /> -->
+					<h6><%= link_to article.title, article_path(article.id),{:style=>'color:blue;'}%></h6>
+					<p><%=raw article.brief_description%></p>
+					<%if group_article.length == index + 1 %>
+						<p style="margin-top:8px;"><a href="<%=article_search_path%>"> More</a></p>
+					<%end%>
+				</li>
+				<%end%>
+			</ul>
+		</div>
+		<%end%>
+	<%else %>
+	<div class="box-content1"></div>
+	<%end%>
+</div>
+
+
+<div class="center-inner-right">
+  <% if @articles2.present?%>
+	<%@articles2.each do |group_article|%>
+		<div class="box-content">
+		
+			<h2><%=group_article[0].category.name.titleize%></h2>
+			<!--<img src="/assets/article_img1.png" alt="article img">-->
+			<ul>
+				<% group_article.each_with_index do |article, index|%>
+				<li class= <%=group_article.length == index + 1 ? "last" : "" %>>
+				<!--<img src="/assets/article_img1.png" alt="article img" /> -->
+					<h6><%= link_to article.title, article_path(article.id),{:style=>'color:black;'}%></h6>
+					<p><%=raw article.brief_description%></p>
+					
+					<%if group_article.length == index + 1 %>
+						<p style="margin-top:8px;"><a href="<%=article_search_path%>"> More</a></p>
+					<%end%>
+					
+				</li>
+				<%end%>
+			</ul>
+		</div>
+		<%end%>
+	<%else %>
+	<div class="box-content1"></div>
+	<%end%>
+		
+
+</div>
+<div class="clear"></div>
+</div>
+<%= render "layouts/right_add_column"%>

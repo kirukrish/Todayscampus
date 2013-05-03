@@ -1,0 +1,44 @@
+<div class="center-right">
+  <div class="search-box">
+    <img class="find" src="/assets/find_job.png">
+    <a href="#"><img src="/assets/post_job_btn.png"></a>
+    <p>Browse 345 Jobs</p>
+    <div class="search"><input type="text"> <input class="search-icon" type="button"></div>
+    <div class="clear"></div>
+  </div>
+  <div class="ad">
+    <img src="/assets/ad_right.jpg">
+  </div>
+	
+ <% if @articles3.present?%>
+	<%@articles3.each do |group_article|%>
+		<div class="box-content1">
+		
+			<h2><%=group_article[0].category.name.titleize%></h2>
+			<!--<img src="/assets/article_img1.png" alt="article img">-->
+			<ul>
+				
+				<% group_article.each_with_index do |article, index|%>
+				<li class= <%=group_article.length == index + 1 ? "last" : "" %>>
+				<!--<img src="/assets/article_img1.png" alt="article img" /> -->
+					<h6><%= link_to article.title, article_path(article.id),{:style=>'color:black;'}%></h6>
+					<p><%=raw article.brief_description%></p>
+					
+					<%if group_article.length == index + 1 %>
+						<p style="margin-top:8px;"><a href="<%=article_search_path%>"> More</a></p>
+					<%end%>
+					
+				</li>
+				<%end%>
+			</ul>
+		</div>
+			<div class="ad">
+    <img src="/assets/ad_right1.jpg">
+  </div>
+		<%end%>
+		
+	<%else %>
+	<div class="box-content1"></div>
+	<%end%>
+		
+</div>

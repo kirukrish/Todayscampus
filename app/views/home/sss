@@ -1,0 +1,21 @@
+	<% if articles.present?%>
+	<%articles.each do |group_article|%>
+		<div class="box-content1">
+		
+			<h2><%=group_article[0].category.name.titleize%></h2>
+			<!--<img src="/assets/article_img1.png" alt="article img">-->
+			<ul>
+				<li>
+				<% group_article.each do |article|%>
+				<!--<img src="/assets/article_img1.png" alt="article img" /> -->
+					<h6><%=article.title%></h6>
+					<p><%=raw article.brief_description%><a href="#">More</a></p>
+				</li>
+				<%end%>
+			</ul>
+		</div>
+		<%end%>
+	<%else %>
+	<div class="box-content1"></div>
+	<%end%>
+</div>

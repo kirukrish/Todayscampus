@@ -1,0 +1,16 @@
+<%if !@jobs.empty?%>
+  <ul>
+	<%@jobs.each do |job|%>
+   <li><%=truncate(job.title)%>-
+				<%=job.from_date.to_date%>-
+				<%=job.to_date.to_date%>-
+				<%=link_to "Show",employers_post_job_path(job.id)%>-
+				<%=link_to "Edit",edit_employers_post_job_path(job)%>-
+				<%=link_to "Delete",employers_post_job_path(job),:method=>:delete, :confirm=>"Sure to delete..?" %></li>
+	<%end%>
+  </ul>
+<%end%>
+
+<br/>
+
+<%=link_to "Post a new job",new_employers_post_job_path%>

@@ -1,0 +1,67 @@
+<!-- header -->
+<header>
+  <div class="wrapper">
+    <div class="logo"><h1><%= link_to "", root_url, :id => "logo", :title => "Today's Campus" %></h1></div>
+    <div class="social">
+      <div class="subscribe-top">
+        <%= link_to "Subscribe Today", "#", :title => "Subscribe Today" %>
+        <%= link_to "Advertise", "#", :title => "Advertise" %>
+        <%= link_to "Contact Us", "#", :title => "Contact Us" %>
+        <% if user_signed_in? %>
+            <%= link_to('Edit profile', edit_registration_path(current_user)) %>
+            <%= link_to('Logout', destroy_session_path(current_user), :method => :delete) %>
+        <% else %>
+            <%= link_to "Sign in", new_user_session_path %>
+        <% end %>
+      </div>
+      <div class="clear"></div>
+      <div class="right-top">
+        <div class="right-top-sub">
+          <%= image_tag "top-right-img.jpg", :alt => "Digital Magazine" %>
+          <span class="large-font">Digital <br> Magazine</span>
+          <span class="small-font">Get Yours Today</span>
+        </div>
+        <div class="social-wrap">
+          <ul id="icons">
+            <li><%= link_to (image_tag 'facebook.png', :alt => 'facebook' ), "#", :title => 'Facebook' %></li>
+            <li><%= link_to (image_tag 'twitter.png', :alt => 'twitter' ), "#", :title => 'Twitter' %></li>
+            <li><%= link_to (image_tag 'linkedin.png', :alt => 'linkedin' ), "#", :title => 'LinkedIn' %></li>
+            <li><%= link_to (image_tag 'v-icon.png', :alt => 'vimeo' ), "#", :title => 'Vimeo' %></li>
+            <li><%= link_to (image_tag 'rss.png', :alt => 'rss' ), feed_topics_path(), :title => 'RSS' %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <!-- Navigation -->
+    <nav>
+      <ul id="nav" class="drop">
+        <li><%= link_to "Topics", article_search_path, :title => "Topics", :class => 'active' %>
+          <ul class="drop-down">
+            <% Topic.all.each do |topic|%>
+                <li><%= link_to topic.title, article_search_path(:topic_id => topic.id), :title => topic.title %></li>
+            <% end %>
+          </ul>
+        </li>
+        <li><%= link_to "Videos", "#", :title => "Videos" %></li>
+        <li><%= link_to "Webinars", "#", :title => "Webinars" %></li>
+        <li><%= link_to "Events", events_path, :title => "Events" %></li>
+        <li><%= link_to "Jobs", "/jobs", :title => "Jobs" %></li>
+        <li class="search">
+				<%= form_tag all_search_path, :method => :get , :id => "all_search" do %>
+				
+				<select name="category">
+					<option value="">Select Category</option>
+					<option value="article">Article</option>
+					<option value="job">Jobs</option>
+				</select>
+
+				<%= text_field_tag 'q' %><a href="#" onclick= "$('#all_search').submit(); return false;"></a>
+				<%end%>
+				</li>
+      </ul>
+    </nav>
+    <!-- Navigation -->
+  </div>
+</header>
+<!-- / header -->

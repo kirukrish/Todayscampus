@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Today's Campus</title>
+  <meta charset="utf-8">
+
+  <%= javascript_include_tag "application" %>
+
+  <%= stylesheet_link_tag "reset", :media => "all" %>
+  <%= stylesheet_link_tag "layout", :media => "all" %>
+  <%= stylesheet_link_tag "style", :media => "all" %>
+
+  <!-- slider content start -->
+  <%= stylesheet_link_tag    "flexslider", :media => "screen" %>
+  <%= stylesheet_link_tag "zebra_datepicker", :media => "screen" %>
+  <%= javascript_include_tag "jquery.min" %>
+  <%= javascript_include_tag "jquery.flexslider-min" %>
+	<script type="text/javascript" src="/assets/zebra_datepicker.js"></script>
+        <script type="text/javascript" src="/assets/functions.js"></script>
+
+  <script type="text/javascript">
+      $(window).load(function() {
+          $('.flexslider').flexslider();
+      });
+  </script>
+	<link rel="stylesheet" href="/assets/pagination.css" type="text/css" media="screen" />
+
+  <!-- slider content end -->
+  <!--[if lt IE 9]>
+  <%= stylesheet_link_tag "style_ie", :media => "all" %>
+  <![endif]-->
+  <!-- jQuery -->
+
+  <!--[if lt IE 9]>
+  <%= javascript_include_tag "html5" %>
+  <style type="text/css">
+      .box1 figure {behavior:url(js/PIE.htc)}
+  </style>
+  <![endif]-->
+
+<!-- Contact Form CSS files -->
+<link type='text/css' href='/assets/basic.css' rel='stylesheet' media='screen' />
+
+<!-- IE6 "fix" for the close png image -->
+<!--[if lt IE 7]>
+<link type='text/css' href='/assets/basic_ie.css' rel='stylesheet' media='screen' />
+<![endif]-->
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- top -->
+<div class="top-sub-wrap">
+  <div class="top-main">Covering the people, Campuses & Companies making Business news in Higher Education</div>
+</div>
+<!-- top end-->
+<div class="clear"></div>
+<div class="main-wrap">
+  <div class="main">
+    <%= render "layouts/header"%>
+    <!-- content -->
+    <article id="content">
+    <%= render "layouts/add_wrapper"%>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    <div class="content-wrapper">
+        <%= yield %>
+    </div>
+    </article>
+    <!-- / content -->
+    <div class="clear"></div>
+
+  </div>
+</div>
+<%= render "layouts/footer"%>
+<%#= javascript_include_tag "jquery", "jquery.simplemodal", "basic", "jquery-1.3.2", "jquery.paginate" %>
+
+
+</body>
+</html>

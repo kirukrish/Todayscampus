@@ -1,0 +1,48 @@
+            	<div class="center-left">
+                <h2 class="register-emp">RSS Feeds</h2>
+         			<div class="shopping-cart">
+                    <p>Use RSS to receive notice of articles, roundups and interviews that cover topics in which you are interested.</p>
+	<%if @topics%>
+<table width="635" border="0" class="rss-table" cellspacing="0" cellpadding="0">
+  <tr class="border-tab">
+    <td width="150">Topic</td>
+    <td width="450">Feed URL</td>
+  </tr>
+	<%@topics.each do |topic| %>
+  <tr class="<%=cycle("add", "even")%>">
+    <td width="150"><%=topic.title.capitalize%></td>
+    <td width="450"> <%=link_to feed_topic_url(topic.id, :only_path => false), feed_topic_url(topic.id, :only_path => false), :class => "rss-feed"%></td>
+  </tr>
+	<%end%>
+</table>
+
+<%else%>
+<p> No Topics Found</p>
+<%end%>
+
+                    </div>
+               </div>
+               <div class="center-right">
+                                        
+<div class="clear"></div>
+                    
+                    <div class="search-box">
+                        <span><a href="register-employer.html" class="btn-reg">Login</a></span><span style="color:#fff;">or</span>
+                        <span><a href="register-employer.html" class="btn-reg">Register</a></span>
+                    </div>
+                    <div class="clear height10"></div>
+                    <div class="search-box">
+                        <span class="hiring">Hiring?</span><a href="register-employer.html"><img src="/assets/post_job_btn.png"></a>
+                        <div class="learn-wrap">
+                        <a href="learn-more.html" class="learn">Learn More</a>
+                        <a href="rates.html" class="learn">Our Rates</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                            
+										<%= render "articles/article_detail_sidebar", :article => @article, :similar_articles => @similar_articles, :topic => @topic%>
+               </div>
+               
+             
+             
+            

@@ -1,0 +1,2 @@
+module Employers::EmployerDetailsHelper
+end

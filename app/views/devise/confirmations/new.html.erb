@@ -1,0 +1,20 @@
+<div class="center-left">
+  <h2 class="register">Resend confirmation instructions</h2>
+  <div class="login-wrap">
+    <div class="login-subwrap">
+      <%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="label-wrap">
+            <label><%= f.label :email %></label>
+            <%= f.email_field :email, :autofocus => true %>
+          </div>
+
+          <div class="label-wrap">
+            <%= f.button "Resend confirmation instructions", :class => 'btn' %>
+          </div>
+          <div class="clear"></div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render "layouts/right_add_column"%>

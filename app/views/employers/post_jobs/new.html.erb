@@ -1,0 +1,276 @@
+            	<div class="center-left">
+                <h2 class="register-emp" style="margin:0">Post a new job</h2>
+                <div class="registration-wrap-emp">
+ 					<%=form_for @job,:url=>employers_post_jobs_path do |f|%>
+					   
+						 <%=f.text_field :user_id,:value=>current_user.id,:type=>"hidden"%><!-- Default user id added to filed user_id -->
+						 
+	                           <!-- <form> -->	
+                          <!--  <div class="label-wrap-emp">
+                            	<label style="width:auto">Institution<span class="required">*</span></label><br>
+                                <input type="text" class="width250">
+                             </div>
+                            <div class="emp-tips">Enter a bit of your institution name to find it in our drop down menu, then choose the name from the menu. This will ensure appropriate pricing is applied. If your institution name is not recognized, please type in the complete name and tab out of the field.</div>    -->
+                           
+                           <div class="credit-wrap">
+                           <b>Buy a package of credits that can be used to post jobs over the next 90 days.</b>
+                            <div class="label-wrap-emp width350">
+                                <input class="btn2 right" style="width:220px; border:0;" value="Add 10 Credit Package - $1,750.00" type="submit">
+                                <input class="btn2 right" style="width:200px; border:0; float:left;" value="Add 5 Credit Package - $925.00" type="submit">
+                            </div>
+                            <div class="clear"></div>
+                            </div>
+                            <!--<div class="credit-wrap">
+                            <p style="width:600px; padding:0 10px 0 10px; text-align:center;" class="credit-txt">SPECIAL OFFER FOR INSIDE HIGHER ED RECRUITERS. Manage your search with Interfolio's ByCommittee at no charge. ByCommittee lets you recruit, evaluate and select the most talented and diverse faculty and staff by streamlining candidate applications, search committee evaluations, and the recommendation process.<br><a href="#">Click to learn more before you post your job.</a></p>
+                            </div>-->
+                            <div class="search-txt5">Posting Information</div>
+                            <div class="search-box1 backgroundred">
+                            	<div class="posting-wrap">
+                                	<p><b>Choose your posting options:</b><span class="error"><%=@job.errors[:job_validity_id].first%></span></p>
+                                    <% for job_validity in JobValidity.all_active %>
+																	      <div class="posting-left">
+                                        	<div class="input-txt"><%=f.radio_button :job_validity_id , job_validity.id %></div>
+                                            <div class="posting-label">
+                                            <label>
+                                            <span class="days"><%=job_validity.name%> </span><br>
+                                            <span class="price">$<%=job_validity.amount%> </span><br>
+                                            <span class="required">(or <%=job_validity.no_of_credits %> credits)</span>
+                                            </label>
+                                            </div>
+                                        </div>
+                                     <% end %>   
+                                        <div class="posting-left">
+                                        	 <div class="posting-label">
+                                            <label>From date</label>
+                                           <!-- <form action="javascript:void(0)" method="post"> -->
+                                                <div><!--<input id="datepicker-example9" type="text">-->
+																			<%=f.text_field :from_date,:id=>"datepicker-example9",:size=>10%></div>
+																				<span class="error"><%=@job.errors[:from_date].first%></span>
+                                            <!-- </form> -->
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="posting-left">
+                                            <div class="posting-label">
+                                            <label>To date</label>
+																							<!-- <form action="javascript:void(0)" method="post"> -->
+                                                <div><!--<input id="datepicker-example99" type="text">-->
+																			<%=f.text_field :to_date,:id=>"datepicker-example99",:size=>10%></div>
+																			<span class="error"><%=@job.errors[:to_date].first%></span>
+                                             <!-- </form> -->
+                                            </div>
+                                        </div>
+                                      
+                                  <div class="clear"></div> 
+                                  <p><b>Choose your posting options:</b><span class="error"><%=@job.errors[:job_package_id].first%></span></p> 
+                                  <% for job_package in JobPackage.all_active %>
+																	
+																			<div class="posting-left">
+																						<div class="input-txt"><%=f.radio_button :job_package_id, job_package.id %></div>
+                                            <div class="posting-label">
+                                            <label>
+                                            <span class="days"><%=job_package.name%></span><br>
+                                            <span class="price">$<%=job_package.amount%></span><br>
+                                            <span class="required">(or <%=job_package.no_of_credits%> credit)</span>
+                                            <p class="credittext"><%=job_package.description%><br/><a href="#">(Learn More)</a></p>
+                                            </label>
+                                            </div>
+                                        </div>
+                                        
+																	<% end %>
+																		<div class="clear"></div>  
+                                </div>
+                            </div>
+                         <!-- </form> -->
+                          
+                          <div class="search-txt6">Job Location</div>
+                            <div class="search-box1 backgroundred">
+														<!--<form> -->
+														<%=f.fields_for :job_location do |j| %>
+                        		<div class="label-wrap-emp-post">
+                                    <label>Country<span class="required">*</span></label>
+                                  <!--  <select class="form-select-locate"><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option></select> -->
+																	<%=select_tag("job[job_location_attributes][job_country_id]",options_from_collection_for_select(Country.all,:id,:name),:class=> "form-select-locate",:prompt=>"--select--", :data => {:remote => true, :url => job_location_state_select_employers_post_jobs_path})%>
+																	<span class="error"><%=@job.errors['job_location.job_country_id'].first%></span>
+                                 </div>
+                                 <div class="label-wrap-emp-post">
+                                    <label>City<span class="required">*</span></label>
+                                    <%=j.text_field :job_city %>
+														<span class="error"><%=@job.errors['job_location.job_city'].first%></span>
+                                  </div>
+                                  <div class="label-wrap-emp-post">
+                                    <label>State<span class="required">*</span></label>
+                                    <!--<select class="form-select-locate"><option selected="selected" value="">--</option><option value="AL">Alabama</option><option value="AK">Alaska</option></select> -->
+																<div id="job_state_select"	><select class="form-select-locate"><option>--select--<option></select></div>
+																			<span class="error"><%=@job.errors['job_location.job_state_id'].first%></span>
+                                  </div>
+                                  <div class="label-wrap-emp-post">
+                                    <label>ZIP Code<span class="required">*</span></label>
+                                    <%=j.text_field :job_zip %>
+														<span class="error"><%=@job.errors['job_location.job_zip'].first%></span>
+                                  </div>
+                          <!--   </form> -->
+													<%end%>
+                            </div>
+                            
+                            
+                            <div class="search-txt6">Job Details<span class="required1">*</span></div>
+                            <div class="search-box1 backgroundred">
+													  <!--<form> -->
+                        		<div class="label-wrap-emp-post">
+                                    <label>Title<span class="required">*</span></label>
+                                    <%=f.text_field :title %>
+														<span class="error"><%=@job.errors[:title].first%></span>
+                                 </div>
+                                 
+                                 <div class="label-wrap-emp-post">
+                                    <label>Description<span class="required">*</span></label>
+																		<%=f.text_area :description,:cols=>"60",:rows=>"5",:class=>"textarea" %>
+																     <span class="error"><%=@job.errors[:description].first%></span>		
+                                 </div>
+                                 <div class="credittext bottom10">Your summary will appear along with your job title and institution name in search results. Keep it short - 600 characters or less. If you don't include a summary, we'll display the first line or two of your description instead. Current length is 0.</div>
+																 
+																 <div class="label-wrap-emp-post">
+                                    <label>Required Qualifications<span class="required">*</span></label>
+																		<%=f.text_area :required_qualification,:cols=>"60",:rows=>"5",:class=>"textarea_small" %>
+																     <span class="error"><%=@job.errors[:required_qualification].first%></span>		
+                                 </div>
+																 
+																 <div class="label-wrap-emp-post">
+                                    <label>Preferred Qualifications<span class="required">*</span></label>
+																		<%=f.text_area :preferred_qualification,:cols=>"60",:rows=>"5",:class=>"textarea_small" %>
+																     <span class="error"><%=@job.errors[:preferred_qualification].first%></span>		
+                                 </div>
+																 
+																 <div class="label-wrap-emp-post">
+                                    <label>Additional Notes</label>
+																		<%=f.text_area :additional_notes,:cols=>"60",:rows=>"5",:class=>"textarea_small" %>
+																     <span class="error"><%=@job.errors[:additional_notes].first%></span>		
+                                 </div>
+																 
+                                 <div class="label-wrap-emp-post">
+                                    <label>Job Type<span class="required">*</span></label>
+                                   <!-- <select class="form-select-locate"><option value="_none">- Select a value -</option><option value="1010">Part time faculty</option></select> -->
+																		 <%=select_tag("job[job_type_id]",options_from_collection_for_select(JobType.all,:id,:name),:class=> "form-select-locate",:prompt=>"--select--", :data => {:remote => true, :url => job_category_select_employers_post_jobs_path})%>
+																		<span class="error"><%=@job.errors[:job_type_id].first%></span>
+                                  </div>
+                                  <div class="label-wrap-emp-post">
+                                    <label>Job Category<span class="required">*</span></label>
+                                    <!--<select class="form-select" size="12" multiple="multiple"><option value="710">FACULTY JOBS</option></select> -->
+																			<div id="category_select"><select class="form-select-locate"><option>--select--<option></select></div>
+																			<span class="error"><%=@job.errors[:job_category_id].first%></span>
+                                    <div class="credittext-left">To select more than one category, hold down the Ctrl key.</div>
+                                  </div>
+                            </div>
+ 
+ 							<div class="search-txt7">Applications Go To.<span class="required1">*</span></div>
+                                <div class="search-box1 backgroundred">
+                                <p>You must provide at least one option for receiving applications.</p>
+                                 <!--   <form> -->
+                                        <div class="label-wrap-emp-post">
+                                            <label>Email<span class="required">*</span></label>
+                                            <%=f.text_field :email %>
+																						<span class="error"><%=@job.errors[:email].first%></span>
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>URL<span class="required">*</span></label>
+                                             <%=f.text_field :url %>
+																						 <span class="error"><%=@job.errors[:url].first%></span>
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>Country<span class="required">*</span></label>
+																						 <%=select_tag("job[country_id]",options_from_collection_for_select(Country.all,:id,:name),:class=> "form-select-locate",:prompt=>"--select--", :data => {:remote => true, :url => job_state_select_employers_post_jobs_path})%>
+																						 <span class="error"><%=@job.errors[:country_id].first%></span>
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>Full name</label>
+                                            <%=f.text_field :full_name %>
+																						<span class="error"><%=@job.errors[:full_name].first%></span>
+                                         </div>
+                                        <!-- <div class="label-wrap-emp-post">
+                                            <label>Institution</label>
+                                            <input type="text">
+                                         </div> -->
+                                         <div class="label-wrap-emp-post">
+                                            <label>Street</label>
+                                            <%=f.text_field :street %>
+																						<span class="error"><%=@job.errors[:street].first%></span>
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>Street 2</label>
+                                            <%=f.text_field :street1 %>
+																						<span class="error"><%=@job.errors[:street1].first%></span>
+                                         </div>
+                                          <div class="label-wrap-emp-post">
+                                            <label>City</label>
+                                            <%=f.text_field :city %>
+																						<span class="error"><%=@job.errors[:city].first%></span>
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>State</label>
+                                            <div id="state_select"	>
+																						<select class="form-select-locate"><option>--select--<option></select></div>
+																						 <span class="error"><%=@job.errors[:state_id].first%></span>
+                                         </div>
+                                         <div class="label-wrap-emp-post">
+                                            <label>ZIP Code</label>
+                                            <%=f.text_field :zip %>
+																						<span class="error"><%=@job.errors[:zip].first%></span>
+                                         </div>
+                                   <!--  </form> -->
+                                 </div>
+   <!--<input type="submit" value="Continue" style="width:72px; border:0; float:left;" class="btn2 right">-->
+   <!--<input type="submit" value="Post Another Job" style="width:120px; border:0; float:left;" class="btn2 right"> -->
+	 <%=f.submit "Submit and Another Job", :style=>"width:180px; border:0; float:left;", :class=>"btn2 right" %>
+	 <%=f.submit "Submit", :style=>"width:120px; border:0; float:left;", :class=>"btn2 right" %>
+   <div class="clear"></div>
+	 <%end%>
+   </div>             	
+ </div>
+
+   <div class="center-right">
+                    <div class="search-box">
+                        <span class="hiring">Hiring?</span><a href="register-employer.html"><img src="/assets/post_job_btn.png"></a>
+                        <div class="learn-wrap">
+                        <a href="learn-more.html" class="learn">Learn More</a>
+                        <a href="rates.html" class="learn">Our Rates</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="ad">
+                    	<img src="/assets/ad_right.jpg">
+                    </div>
+                    <div class="box-content1">
+                        	<h2>Financial Aid & Bursar</h2>
+                            <ul>
+                            <li>
+                            <h6>Awards Recognize Student Loan Default | Prevention And Financial Literacy Programs</h6>
+                            <p>INDIANAPOLIS - USA Funds® has announced the recipients of its 2012 Excellence in Debt Management Awards. <a href="#"> More</a></p>
+                           </li>
+                            <li>
+                            <h6>Tuition paid in ones</h6>
+                            <p>In a YouTube video Nicolaus Ramos, a U of Colorado student from Sacramento, explains why he paid his $14,309 tuition bill with 30 pounds of one-dollar bills. <a href="#"> More</a></p>
+                            </li>
+                            <li class="last">
+                            <h6>Heading off the college tab</h6>
+                            <p>Ken Clark, author of “The Complete Idiot’s Guide to Paying for College”, reduces how to pay for college to one simple rule: “Plan on putting away $75 per kid per month from the day they’re born, and that will get you four years at a state school.”<a href="#"> More</a></p>
+                           </li>
+                            </ul>
+                            </div>
+                            
+                            <div class="ad">
+                                <img src="/assets/ad_right1.jpg">
+                            </div>
+                            <div class="box-content1">
+                        	<h2>Student Loan Intelligence</h2>
+                          <ul>
+                            <li class="last">
+                            <h6>One common peculiarity among U.S. student loans</h6>
+                            <p>For all U.S. student loans - government and private - a borrower has no bankruptcy protection.<a href="#"> More</a></p>
+                            </li>
+                           </ul> 
+                        </div>
+               </div>
+               
+            
+            

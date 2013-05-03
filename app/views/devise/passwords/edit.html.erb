@@ -1,0 +1,30 @@
+<div class="center-left">
+  <h2 class="register">Reset Password</h2>
+  <div class="login-wrap">
+    <div class="login-subwrap">
+      <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+          <%#= devise_error_messages! %>
+          <%= f.hidden_field :reset_password_token %>
+
+          <div class="label-wrap">
+            <label style="width:200px;">New password</label>
+            <%= f.password_field :password, :autofocus => true %>
+						<span class="error"><%=resource.errors[:password].first %></span>
+          </div>
+          <div class="label-wrap">
+            <label style="width:200px;">Confirm new password</label>
+            <%= f.password_field :password_confirmation %>
+						<span class="error"><%=resource.errors[:password_confirmation].first %></span>
+          </div>
+
+          <div class="label-wrap">
+            <%= f.button "Change my password", :class => 'btn' %>
+          </div>
+
+          <div class="clear"></div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render "layouts/right_add_column"%>
+

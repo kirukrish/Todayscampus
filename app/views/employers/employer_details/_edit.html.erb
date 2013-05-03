@@ -1,0 +1,208 @@
+<div class="center-left">
+                <!--<div><a class="search-jobs" href="jobs.html">Search Jobs</a></div> -->
+                <div class="registration-wrap-emp">
+                <!--<div class="box-info">Log in to post jobs, save jobs, set up job alert e-mails, join our credentials bank or change your account settings.</div>
+                    	<form>
+                        	<div class="label-wrap-emp">
+                            	<label>Username or e-mail <span class="required">*</span></label>
+                                <input type="text">
+                            </div>
+                            <div class="label-wrap-emp">
+                            	<label>Password<span class="required">*</span></label>
+                                <input type="text">
+                            </div>
+                            
+                            <div class="label-wrap-emp">
+                            	<a class="btn2 right" href="#">Loginhttp://localhost:3000/employers/employer_details/1/edit</a>
+                            </div>
+                            <div class="clear"></div>
+                        </form> -->
+                    
+                    <div id="content">
+		<!--<div id="basic-modal">
+        	<a class="basic btn2" href="forgot-password.html">Learn More about Free Registration</a>
+			<a class="btn2" href="user-account.html">Forgot your password?</a>
+		</div> -->
+		
+	<!--learn more-->	
+ <div id="content1">
+ <!-- modal content -->
+		<div class="freeregistration" id="basic-modal-content">
+			<!--<h3>Why Register?</h3>
+            <p>You can search for and apply to jobs on Todaycampus without an account, but registering gives you more options:</p>
+            <p>
+            </p><ul>
+            <li>Receive e-mail when positions of interest are posted to the site.</li>
+            <li>Save interesting jobs and frequent job searches.</li>
+            <li>Submit your resume to our searchable database so employers can find you.</li>
+            <li>Receive our daily new update e-mail.</li>
+            </ul>
+           <p>We also require registration to post jobs to the site, or to search our credentials bank.</p>
+           <p>You can "upgrade" a job seeker registration to a recruiter account by clicking the "Hiring? Post a Job Now" link you'll find on most jobs pages and providing your institution name.</p>
+           <p>By registering an account with Todaycampus, you are agreeing to our <a href="terms-conditions.html">terms and conditions</a></p> -->
+		</div>
+
+		<!-- preload the images -->
+		<div style="display:none">
+			<img alt="" src="/assets/x.png">
+		</div>
+	</div>
+
+<!--learn more end-->
+
+ </div>
+  <div class="clear"></div>
+ <h2 class="register-emp">Edit Employer Details</h2>
+ <!--<p>Already have a job seeker account? Login first using the form above, then complete the form below to upgrade your account.</p>-->
+ 					<%=form_for @user, :url => employers_employer_detail_path(@user),:html=>{:multipart=> true } do |f|%>
+                        	<div class="label-wrap-emp">
+                            	<label>First name<span class="required">*</span></label>
+                                <%=f.text_field :first_name%>
+	                               <span class="error"><%=@user.errors[:first_name].first%></span>
+                            </div>
+                            <div class="label-wrap-emp">
+                            	<label>Last name<span class="required">*</span></label>
+                                <%=f.text_field :last_name%>
+																<span class="error"><%=@user.errors[:last_name].first%></span>
+                            </div>
+                            <div class="label-wrap-emp">
+                            	<label style="width:auto">Institution, Agency or Company<span class="required">*</span></label><br>
+                                <%=f.text_field :institution, :class=>"width250" %>
+																<span class="error"><%=@user.errors[:institution].first%></span>
+                            </div>
+                            <div class="label-wrap-emp">
+                            	<label style="width:auto">E-mail address<span class="required">*</span></label><br>
+                                <%=f.text_field :email, :class=>"width250",:disabled=> true %>
+																<span class="error"><%=@user.errors[:email].first%></span>
+                             </div>
+                            <div class="emp-tips">A valid e-mail address. All e-mails from the system will be sent to this address. The e-mail address is not made public and will only be used if you wish to receive a new password or wish to receive certain news or notifications by e-mail.</div>
+                             <div class="label-wrap-emp">
+                            	<label>Password<span class="required"></span></label>
+                                <%=f.password_field :password%>
+																<span class="error"><%=@user.errors[:password].first%></span>
+                            </div>
+                            <div class="label-wrap-emp">
+                            	<label>Confirm Password<span class="required"></span></label>
+                                <%=f.password_field :password_confirmation%>
+																<span class="error"><%=@user.errors[:password_confirmation].first%></span>
+                            </div>
+                            <div style="height:30px;" class="emp-tips">Provide a password for the new account in both fields.</div>
+                           
+												<h2 class="register-emp">Edit Organization Details</h2>
+												<%=f.fields_for :organisation do |o| %>
+														<div class="label-wrap-emp">
+                            	<label>About<span class="required">*</span></label>
+                                <%=o.text_area :content,:rows=>5,:cols=>30%>
+																<span class="error"><%=@user.errors['organisation.content'].first%></span>
+                            </div>
+														
+														<div class="label-wrap-emp">
+                            	<label>Street<span class="required">*</span></label>
+                                <%=o.text_field :street%>
+																<span class="error"><%=@user.errors['organisation.street'].first%></span>
+                            </div>
+														
+														<div class="label-wrap-emp">
+                            	<label>City<span class="required">*</span></label>
+                                <%=o.text_field :city%>
+																<span class="error"><%=@user.errors['organisation.city'].first%></span>
+                            </div>
+														
+														<div class="label-wrap-emp">
+                            	<label>State<span class="required">*</span></label>
+                                <%=o.text_field :state%>
+																<span class="error"><%=@user.errors['organisation.state'].first%></span>
+                            </div>
+														
+														<div class="label-wrap-emp">
+                            	<label>Zip-Code<span class="required">*</span></label>
+                                <%=o.text_field :pin%>
+																<span class="error"><%=@user.errors['organisation.pin'].first%></span>
+                            </div>
+														
+														<div class="label-wrap-emp">
+                            	<label>Phone<span class="required">*</span></label>
+                                <%=o.text_field :phone%>
+																<span class="error"><%=@user.errors['organisation.phone'].first%></span>
+                            </div>
+														
+														<div class="label-wrap-emp">
+                            	<label>Website<span class="required">*</span></label>
+                                <%=o.text_field :website%>
+																<span class="error"><%=@user.errors['organisation.website'].first%></span>
+                            </div>
+														
+														<div class="label-wrap-emp">
+                            	<label>Upload Photos/Videos</label><br/>
+                                <%=o.file_field :upload1%><%= image_tag @user.organisation.upload1.url,:size=>"50x50" %><br/>
+																<%=@user.errors['organisation.upload1'].first%>
+                                <%=o.file_field :upload2%><%= image_tag @user.organisation.upload2.url,:size=>"50x50" %><br/>
+                                <%=o.file_field :upload3%><%= image_tag @user.organisation.upload3.url,:size=>"50x50" %><br/>
+                                <%=o.file_field :upload4%><%= image_tag @user.organisation.upload4.url,:size=>"50x50" %><br/>
+                                <%=o.file_field :upload5%><%= image_tag @user.organisation.upload5.url,:size=>"50x50" %><br/>
+                            </div>
+														<%end%>
+														
+														<div class="label-wrap-emp">
+                            	<a title="Cancel" class="btn2 right" href="<%=employers_dashboard_index_path%>">Cancel</a>
+															<%=f.submit "Update",:title=>"Update",:class=>"btn2 right"%>
+                              <!--  <a title="Register" class="btn2 right" href="#">Update</a> -->
+                            </div>
+                            <div class="clear"></div>
+												<%end%>
+   <!--<h2 class="register-emp">Why Register with Todaycampus?</h2>
+   <ul class="why-register">
+   <li>Over 1,000,000 monthly readers</li>
+   <li>Highly diverse readership</li>
+   <li>Readers from all disciplines</li>
+   <li>Unique Dual Career search</li>
+   <li>Great prices. Great results. Great service.</li>
+   </ul> -->
+   </div>             	
+ </div>
+ 
+
+ 
+               <div class="center-right">
+                    <div class="search-box">
+                        <span class="hiring">Hiring?</span><a href="register-employer.html"><img src="images/post_job_btn.png"></a>
+                        <div class="learn-wrap">
+                        <a href="learn-more.html" class="learn">Learn More</a>
+                        <a href="rates.html" class="learn">Our Rates</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="ad">
+                    	<img src="images/ad_right.jpg">
+                    </div>
+                    <div class="box-content1">
+                        	<h2>Financial Aid & Bursar</h2>
+                            <ul>
+                            <li>
+                            <h6>Awards Recognize Student Loan Default | Prevention And Financial Literacy Programs</h6>
+                            <p>INDIANAPOLIS - USA Funds® has announced the recipients of its 2012 Excellence in Debt Management Awards. <a href="#"> More</a></p>
+                           </li>
+                            <li>
+                            <h6>Tuition paid in ones</h6>
+                            <p>In a YouTube video Nicolaus Ramos, a U of Colorado student from Sacramento, explains why he paid his $14,309 tuition bill with 30 pounds of one-dollar bills. <a href="#"> More</a></p>
+                            </li>
+                            <li class="last">
+                            <h6>Heading off the college tab</h6>
+                            <p>Ken Clark, author of “The Complete Idiot’s Guide to Paying for College”, reduces how to pay for college to one simple rule: “Plan on putting away $75 per kid per month from the day they’re born, and that will get you four years at a state school.”<a href="#"> More</a></p>
+                           </li>
+                            </ul>
+                            </div>
+                            
+                            <div class="ad">
+                                <img src="images/ad_right1.jpg">
+                            </div>
+                            <div class="box-content1">
+                        	<h2>Student Loan Intelligence</h2>
+                          <ul>
+                            <li class="last">
+                            <h6>One common peculiarity among U.S. student loans</h6>
+                            <p>For all U.S. student loans - government and private - a borrower has no bankruptcy protection.<a href="#"> More</a></p>
+                            </li>
+                           </ul> 
+                        </div>
+               </div>

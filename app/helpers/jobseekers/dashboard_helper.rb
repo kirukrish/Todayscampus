@@ -1,0 +1,2 @@
+module Jobseekers::DashboardHelper
+end

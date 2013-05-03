@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Today's Campus - jobs</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/assets/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="/assets/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="/assets/style.css" type="text/css" media="all">
+<!-- slider content start -->
+<link rel="stylesheet" href="/assets/pagination.css" type="text/css" media="screen" />
+
+<!-- slider content end -->
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/style_ie.css" />
+		<![endif]-->
+		<!-- jQuery -->
+
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="js/html5.js"></script>
+	<style type="text/css">
+		.box1 figure {behavior:url(js/PIE.htc)}
+	</style>
+<![endif]-->
+
+<!-- Contact Form CSS files -->
+<link type='text/css' href='/assets/basic.css' rel='stylesheet' media='screen' />
+
+<!-- IE6 "fix" for the close png image -->
+<!--[if lt IE 7]>
+<link type='text/css' href='css/basic_ie.css' rel='stylesheet' media='screen' />
+<![endif]-->
+</head>
+<body>
+
+<!-- top -->
+	<div class="top-sub-wrap">
+    	<div class="top-main">Covering the people, Campuses & Companies making Business news in Higher Education</div>
+    </div>
+<!-- top end-->
+<div class="clear"></div>
+<div class="main-wrap">
+	<div class="main">
+<!-- header -->
+		<%= render "layouts/header"%>
+<!-- / header -->
+<!-- content -->
+		<article id="content">
+        <div class="ad-wrap">
+        	<img src="/assets/top_banner.jpg" alt="banner">
+        </div>
+             
+             <div class="content-wrapper">
+            	<div class="center-left">
+                <div class="search-txt">Search jobs</div>
+                <div class="search-box1">
+                	<input type="text" class="search-txt-box"><button class="btn">SEARCH</button>
+                    <div class="tips">
+                    
+                    <div id='content'>
+		<div id='basic-modal'>
+			testing“quote phrases”, combine with AND/OR. <a href='#' class='basic'>More tips</a>
+		</div>
+		
+		<!-- modal content -->
+		<div id="basic-modal-content">
+			<h3>Search Tips</h3>
+            <p class="bottom10">Here are some useful tips to help you with your keyword searches. Once you've run a keyword search, you can apply filters (job category, institution, location). You can also browse jobs by simply selecting a filter.</p>
+            <p class="bottom10">Type your word(s) or phrase(s) into the Keyword box. Searches are not case sensitive, so you don’t need to capitalize. There are several ways to construct your keyword search:</p>
+            <div class="top-bottom">
+            <h5>ENTER ONE WORD</h5>
+            <p>Your search will return every job posting containing that word.<br>Example: architecture</p>
+            </div>
+            <div class="top-bottom">
+			<h5>ENTER A PHRASE</h5>
+            <p>Enclose a phrase in quotation marks to return only job postings containing that exact phrase.<br>Example: “Medieval history” or "tenure track"</p>
+            </div>
+            <div class="top-bottom">
+			<h5>MULTIPLE KEYWORDS OR PHRASES</h5>
+            <p>If you enter several words/phrases, your search will return only job postings containing all of the words/phrases.</p>
+            <p>Example: tenure track medieval history</p>
+            </div>
+            <div class="top-bottom">
+            <h5>SEARCH TIPS</h5>
+            <p>Use the plus (+) symbol to include words and/or the minus (-) symbol to exclude words</p>
+            <p>Examples:</p>
+            <p>business +accounting -marketing</p>
+            <p>student +services -admissions</p>
+            </div>
+            <div class="top-bottom">
+            <p>Enter several words/phrases separated by the word OR to find every job posting containing at least one of the words/phrases</p>
+            <p>Examples:</p>
+            <p>"tenure track" OR tenured</p>
+            <p>"distance education" OR "online learning"</p>
+            </div>
+		</div>
+
+		<!-- preload the images -->
+		<div style='display:none'>
+			<img src='images/x.png' alt='' />
+		</div>
+	</div>
+
+<!-- modal content end-->
+ <div id='content1'>
+            <div id='basic-modal1'><span class="btn1"><a href="#" class='basic1'>Advanced Search</a></span></span></div>
+            <!-- advanced search -->
+                    
+                     <div id="basic-modal-content1">
+						<div class="search-txt1">Keyword Search</div>
+            			 <div class="search-box1 height20">
+                         <div><b>Keywords</b></div>
+                         <input type="text" class="search-txt-box1">
+                         <div class="tips">"quote phrases", combine words and phrases with AND/OR, exclude -terms.</div>
+                         </div>
+                         
+                         <div class="height30"></div>
+                         <div class="search-txt2">Filters</div>
+            			 <div class="search-box1 height50">
+                         <div class="job-category">
+                         <b>Job Category </b>
+                         <select class="form-select" multiple="multiple"><option value="710">FACULTY JOBS</option><option value="743">-Career / Vocational Fields</option><option value="711">-Fine and Performing Arts</option><option value="712">-Humanities</option><option value="713">--Classics</option><option value="714">--English literature and composition</option><option value="715">--Ethnic / cultural / gender studies</option><option value="716">--History</option><option value="717">--Languages</option><option value="718">--Philosophy</option><option value="719">--Religion</option><option value="720">-Professions</option><option value="721">--Architecture</option><option value="722">--Business</option><option value="723">--Communication / design / media</option><option value="726">--Health professions</option><option value="724">--Law</option><option value="725">--Library science</option><option value="1002">--Public administration</option><option value="727">--Social work</option><option value="728">-Science / Engineering / Mathematics</option><option value="804">--Agricultural science / extension</option><option value="729">--Biology / life sciences</option><option value="730">--Chemistry / biochemistry</option><option value="731">--Computer Science / Information Technology</option><option value="732">--Engineering</option><option value="1003">--Environmental sciences</option><option value="733">--Mathematics</option><option value="734">--Physical sciences</option><option value="735">-Social Sciences / Education</option><option value="736">--Anthropology / Archaeology</option><option value="800">--Criminal justice</option><option value="737">--Economics</option><option value="738">--Education</option><option value="1004">--Geography</option><option value="1005">--Kinesiology / physical education</option><option value="739">--Linguistics</option><option value="740">--Political science</option><option value="741">--Psychology</option><option value="742">--Sociology / behavioral studies</option><option value="744">ADMINISTRATIVE JOBS</option><option value="766">-Student affairs / student services</option><option value="769">--Counseling</option><option value="767">--Residence life</option><option value="768">--Student activities</option><option value="1009">--Student services</option><option value="745">-Academic administration</option><option value="746">--Academic advising</option><option value="747">--Curriculum development</option><option value="1000">--Department chairs</option><option value="795">--Graduate Education</option><option value="748">--Grants / research administration</option><option value="749">--Instructional technology / distance education</option><option value="750">--International programs</option><option value="751">--Librarians</option><option value="752">--Publishing</option><option value="753">--Research staff / postdocs</option><option value="754">-Institutional administration</option><option value="1001">--Assessment</option><option value="755">--Admissions / registrar</option><option value="756">--Athletics</option><option value="757">--Business / financial management</option><option value="796">--Clerical/administrative support</option><option value="758">--Development / fund raising / alumni affairs</option><option value="797">--Diversity</option><option value="759">--Facilities / auxiliary services / sustainability</option><option value="760">--Financial aid</option><option value="7501">--Health services/medical</option><option value="761">--Human resources</option><option value="762">--Information systems / technology</option><option value="798">--Institutional research</option><option value="763">--Legal affairs</option><option value="764">--Marketing / public relations / government relations</option><option value="799">--Program administration</option><option value="765">--Safety and security</option><option value="770">EXECUTIVE POSITIONS</option><option value="771">-Chief executives / executive directors</option><option value="772">-Deans</option><option value="773">-Presidents / chancellors</option><option value="774">-Provosts / Vice Presidents</option><option value="775">JOBS OUTSIDE HIGHER EDUCATION</option><option value="776">-Consultants / businesses</option><option value="777">-Foundations</option><option value="778">-Government agencies</option><option value="779">-High schools</option><option value="780">-Literary and cultural organizations</option><option value="781">-Lobbying groups</option><option value="782">-Museums</option><option value="1006">-Non-profit organizations/associations</option><option value="801">-Public policy</option><option value="783">-Publishers</option></select>
+                         <div class="font10">Use the Ctrl key to select options</div>
+                         </div>
+                         
+                         <div class="job-category-last">
+                         <b>Job Type</b>
+                         <select class="form-select" id="edit-filters-im-22-field-job-type" name="filters[im_22_field_job_type][]" multiple="multiple"><option value="1010">Part time faculty</option><option value="1011">Postdocs</option><option value="24">Full Time staff</option><option value="818">Online/remote</option><option value="23">Part Time staff</option><option value="25">Temporary/contract positions</option><option value="819">Tenured/tenure track/full-time faculty</option><option value="1012">Other</option></select>
+                         <div class="font10">Use the Ctrl key to select options</div>
+                         </div>
+                          <div class="txt-box">
+                          <b>Institution</b>
+                          <input type="text" class="search-txt-box2">
+                          <div class="font10">Enter part of the name, then select from the provided options</div>
+                          </div>
+                          <div class="selet-box">
+                          <b>Posted Date</b>
+                          <select class="form-select1"><option value=""></option><option value="1 day">Today</option><option value="2 days">Past 2 days</option><option value="3 days">Past 3 days</option><option value="4 days">Past 4 days</option><option value="1 week">Past week</option><option value="2 weeks">Past 2 weeks</option><option value="1 month">Past month</option><option value="2 months">Past 2 months</option><option value="3 months">Past 3 months</option><option value="1 year">Past year</option></select>
+                          </div>
+                          <div class="job-category-last">
+                         <b>Job Location </b>
+                         <select class="form-select" id="edit-filters-im-83-field-job-location" name="filters[im_83_field_job_location][]" multiple="multiple"><option value="470">United States</option><option value="5686">-Alabama</option><option value="5716">-Alaska</option><option value="5698">-Arizona</option><option value="5702">-Arkansas</option><option value="1065">-California</option><option value="5678">-Colorado</option><option value="5692">-Connecticut</option><option value="5710">-Delaware</option><option value="1045">-District Of Columbia</option><option value="5676">-Florida</option><option value="1044">-Georgia</option><option value="5718">-Guam</option><option value="5713">-Hawaii</option><option value="5703">-Idaho</option><option value="1046">-Illinois</option><option value="5680">-Indiana</option><option value="5690">-Iowa</option><option value="5696">-Kansas</option><option value="5674">-Kentucky</option><option value="5709">-Louisiana</option><option value="5694">-Maine</option><option value="5673">-Maryland</option><option value="5683">-Massachusetts</option><option value="5687">-Michigan</option><option value="5682">-Minnesota</option><option value="5712">-Mississippi</option><option value="5708">-Missouri</option><option value="5695">-Montana</option><option value="5689">-Nebraska</option><option value="5705">-Nevada</option><option value="5704">-New Hampshire</option><option value="5677">-New Jersey</option><option value="5706">-New Mexico</option><option value="1048">-New York</option><option value="5679">-North Carolina</option><option value="5711">-North Dakota</option><option value="5681">-Ohio</option><option value="5691">-Oklahoma</option><option value="1063">-Oregon</option><option value="5675">-Pennsylvania</option><option value="5715">-Puerto Rico</option><option value="5714">-Rhode Island</option><option value="1055">-South Carolina</option><option value="5707">-South Dakota</option><option value="5685">-Tennessee</option><option value="1061">-Texas</option><option value="5701">-Utah</option><option value="5693">-Vermont</option><option value="5684">-Virgin Islands</option><option value="5688">-Virginia</option><option value="5697">-Washington</option><option value="5700">-West Virginia</option><option value="5699">-Wisconsin</option><option value="5717">-Wyoming</option><option value="251">Afghanistan</option><option value="252">Albania</option><option value="253">American Samoa</option><option value="254">Andorra</option><option value="255">Angola</option><option value="256">Anguilla</option><option value="257">Antigua and Barbuda</option><option value="258">Argentina</option><option value="259">Armenia</option><option value="260">Aruba</option><option value="261">Australia</option><option value="262">Austria</option><option value="263">Azerbaijan</option><option value="264">Bahamas</option><option value="265">Bahrain</option><option value="266">Bangladesh</option><option value="267">Barbados</option><option value="268">Belarus</option><option value="269">Belgium</option><option value="270">Belize</option><option value="271">Benin</option><option value="272">Bermuda</option><option value="273">Bhutan</option><option value="274">Bolivia</option><option value="275">Bosnia-Herzegovina</option><option value="276">Botswana</option><option value="277">Bouvet Island</option><option value="278">Brazil</option><option value="279">Brunei</option><option value="280">Bulgaria</option><option value="281">Burkina Faso</option><option value="282">Burundi</option><option value="283">Cambodia</option><option value="284">Cameroon</option><option value="285">Canada</option><option value="286">Cape Verde</option><option value="287">Cayman Islands</option><option value="288">Central African Republic</option><option value="289">Chad</option><option value="290">Chile</option><option value="291">China</option><option value="292">Christmas Island</option><option value="293">Cocos (Keeling) Islands</option><option value="294">Colombia</option><option value="295">Comoros</option><option value="296">Congo, Democratic Republic of the (Zaire)</option><option value="297">Congo, Republic of</option><option value="298">Cook Islands</option><option value="299">Costa Rica</option><option value="300">Croatia</option><option value="301">Cuba</option><option value="302">Cyprus</option><option value="303">Czech Republic</option><option value="304">Denmark</option><option value="305">Djibouti</option><option value="306">Dominica</option><option value="307">Dominican Republic</option><option value="394">Dutch Caribbean</option><option value="308">Ecuador</option><option value="309">Egypt</option><option value="310">El Salvador</option><option value="311">Equatorial Guinea</option><option value="312">Eritrea</option><option value="313">Estonia</option><option value="314">Ethiopia</option><option value="315">Falkland Islands</option><option value="316">Faroe Islands</option><option value="317">Fiji</option><option value="318">Finland</option><option value="319">France</option><option value="320">French Guiana</option><option value="321">Gabon</option><option value="322">Gambia</option><option value="323">Georgia</option><option value="324">Germany</option><option value="325">Ghana</option><option value="326">Gibraltar</option><option value="5756">Global</option><option value="327">Greece</option><option value="328">Greenland</option><option value="329">Grenada</option><option value="330">Guadeloupe (French)</option><option value="331">Guam (USA)</option><option value="332">Guatemala</option><option value="333">Guinea</option><option value="334">Guinea Bissau</option><option value="335">Guyana</option><option value="336">Haiti</option><option value="337">Holy See</option><option value="338">Honduras</option><option value="339">Hong Kong S.A.R., China</option><option value="340">Hungary</option><option value="341">Iceland</option><option value="342">India</option><option value="343">Indonesia</option><option value="344">Iran</option><option value="345">Iraq</option><option value="346">Ireland</option><option value="347">Israel</option><option value="348">Italy</option><option value="349">Ivory Coast (Cote D`Ivoire)</option><option value="350">Jamaica</option><option value="351">Japan</option><option value="352">Jordan</option><option value="353">Kazakhstan</option><option value="354">Kenya</option><option value="355">Kiribati</option><option value="356">Kuwait</option><option value="357">Kyrgyzstan</option><option value="358">Laos</option><option value="359">Latvia</option><option value="360">Lebanon</option><option value="361">Lesotho</option><option value="362">Liberia</option><option value="363">Libya</option><option value="364">Liechtenstein</option><option value="365">Lithuania</option><option value="366">Luxembourg</option><option value="367">Macau</option><option value="368">Macedonia</option><option value="369">Madagascar</option><option value="370">Malawi</option><option value="371">Malaysia</option><option value="372">Maldives</option><option value="373">Mali</option><option value="374">Malta</option><option value="375">Marshall Islands</option><option value="376">Martinique (French)</option><option value="377">Mauritania</option><option value="378">Mauritius</option><option value="379">Mayotte</option><option value="380">Mexico</option><option value="381">Micronesia</option><option value="382">Moldova</option><option value="383">Monaco</option><option value="384">Mongolia</option><option value="385">Montenegro</option><option value="386">Montserrat</option><option value="387">Morocco</option><option value="388">Mozambique</option><option value="389">Myanmar</option><option value="390">Namibia</option><option value="391">Nauru</option><option value="392">Nepal</option><option value="393">Netherlands</option><option value="395">New Caledonia (French)</option><option value="396">New Zealand</option><option value="397">Nicaragua</option><option value="398">Niger</option><option value="399">Nigeria</option><option value="400">Niue</option><option value="401">Norfolk Island</option><option value="402">North Korea</option><option value="403">Northern Mariana Islands</option><option value="404">Norway</option><option value="405">Oman</option><option value="406">Pakistan</option><option value="407">Palau</option><option value="408">Panama</option><option value="409">Papua New Guinea</option><option value="410">Paraguay</option><option value="411">Peru</option><option value="412">Philippines</option><option value="413">Pitcairn Island</option><option value="414">Poland</option><option value="415">Polynesia (French)</option><option value="416">Portugal</option><option value="417">Puerto Rico</option><option value="418">Qatar</option><option value="7480">Republic of Kosovo</option><option value="419">Reunion</option><option value="420">Romania</option><option value="421">Russia</option><option value="422">Rwanda</option><option value="423">Saint Helena</option><option value="424">Saint Kitts and Nevis</option><option value="425">Saint Lucia</option><option value="426">Saint Pierre and Miquelon</option><option value="427">Saint Vincent and Grenadines</option><option value="428">Samoa</option><option value="429">San Marino</option><option value="430">Sao Tome and Principe</option><option value="431">Saudi Arabia</option><option value="432">Senegal</option><option value="433">Serbia</option><option value="434">Seychelles</option><option value="435">Sierra Leone</option><option value="436">Singapore</option><option value="437">Slovakia</option><option value="438">Slovenia</option><option value="439">Solomon Islands</option><option value="440">Somalia</option><option value="441">South Africa</option><option value="442">South Korea</option><option value="443">Spain</option><option value="444">Sri Lanka</option><option value="445">Sudan</option><option value="446">Suriname</option><option value="447">Svalbard and Jan Mayen Islands</option><option value="448">Swaziland</option><option value="449">Sweden</option><option value="450">Switzerland</option><option value="451">Syria</option><option value="452">Taiwan</option><option value="453">Tajikistan</option><option value="454">Tanzania</option><option value="455">Thailand</option><option value="456">Timor-Leste (East Timor)</option><option value="457">Togo</option><option value="458">Tokelau</option><option value="459">Tonga</option><option value="460">Trinidad and Tobago</option><option value="461">Tunisia</option><option value="462">Turkey</option><option value="463">Turkmenistan</option><option value="464">Turks and Caicos Islands</option><option value="465">Tuvalu</option><option value="5843">U.S. Virgin Islands</option><option value="466">Uganda</option><option value="467">Ukraine</option><option value="468">United Arab Emirates</option><option value="469">United Kingdom</option><option value="471">Uruguay</option><option value="472">Uzbekistan</option><option value="473">Vanuatu</option><option value="474">Venezuela</option><option value="475">Vietnam</option><option value="476">Virgin Islands</option><option value="477">Wallis and Futuna Islands</option><option value="478">Yemen</option><option value="479">Zambia</option><option value="480">Zimbabwe</option></select>
+                         <div class="font10">Use the Ctrl key to select options</div>
+                         </div>
+                       
+                           <div class="clear"></div>
+                         </div>
+                          <div class="height30"></div>
+                        <div class="search-txt3">Proximity (US only)</div>
+                         <div class="search-box1 height20">
+                         
+                          <div class="selet-box1">
+                          <span><b>Within</b></span>
+                          <span><select class="form-select2" name="proximity[dist]" id="edit-proximity-dist"><option value="0">0</option><option value="5">5</option><option selected="selected" value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option><option value="250">250</option><option value="500">500</option></select></span>
+                          </div>
+							<div class="txt-box1">
+                          <span class="boldtxt">miles of</span>
+                          <span><input type="text" class="search-txt-box3"></span>
+                          <div class="font10">Enter a zip code or city and state, then select from the options</div>
+                          </div>
+                          </div>
+                          <div class="clear"></div>
+                          <div style="margin-top:20px"><b>Name this search (optional)</b></div>
+                          <input type="text" class="search-txt-box2">
+                          <div class="font10">By providing a name for this search, you can make it easier to identify in your list of saved searches.</div>
+                         <div class="bottom-btn"><a class="btn2">Search</a><a class="btn2">Save this Search</a><a class="btn2">Create a Job Alert</a><a class="btn2 simplemodal-close">Cancel</a></div>
+                    </div>
+        </div>
+        
+        <div id='content2'>
+            <div id='basic-modal2'><span class="btn2"><a href="#" class='basic2'>Dual Career Search</a></span></div>
+            <!-- advanced search -->
+                    
+                     <div id="basic-modal-content2">
+			<div class="left-dual">
+            <div class="search-txt4">Job 1</div>
+            <div class="search-box1 height20" style="height:auto;">
+            <div><b>Keywords</b></div>
+            <div><input type="text" class="search-txt-box4"></div>
+            <select class="form-select-dual" multiple="multiple"><option value="710">FACULTY JOBS</option><option value="743">-Career / Vocational Fields</option><option value="711">-Fine and Performing Arts</option><option value="712">-Humanities</option><option value="713">--Classics</option><option value="714">--English literature and composition</option><option value="715">--Ethnic / cultural / gender studies</option><option value="716">--History</option><option value="717">--Languages</option><option value="718">--Philosophy</option><option value="719">--Religion</option><option value="720">-Professions</option><option value="721">--Architecture</option><option value="722">--Business</option><option value="723">--Communication / design / media</option><option value="726">--Health professions</option><option value="724">--Law</option><option value="725">--Library science</option><option value="1002">--Public administration</option><option value="727">--Social work</option><option value="728">-Science / Engineering / Mathematics</option><option value="804">--Agricultural science / extension</option><option value="729">--Biology / life sciences</option><option value="730">--Chemistry / biochemistry</option><option value="731">--Computer Science / Information Technology</option><option value="732">--Engineering</option><option value="1003">--Environmental sciences</option><option value="733">--Mathematics</option><option value="734">--Physical sciences</option><option value="735">-Social Sciences / Education</option><option value="736">--Anthropology / Archaeology</option><option value="800">--Criminal justice</option><option value="737">--Economics</option><option value="738">--Education</option><option value="1004">--Geography</option><option value="1005">--Kinesiology / physical education</option><option value="739">--Linguistics</option><option value="740">--Political science</option><option value="741">--Psychology</option><option value="742">--Sociology / behavioral studies</option><option value="744">ADMINISTRATIVE JOBS</option><option value="766">-Student affairs / student services</option><option value="769">--Counseling</option><option value="767">--Residence life</option><option value="768">--Student activities</option><option value="1009">--Student services</option><option value="745">-Academic administration</option><option value="746">--Academic advising</option><option value="747">--Curriculum development</option><option value="1000">--Department chairs</option><option value="795">--Graduate Education</option><option value="748">--Grants / research administration</option><option value="749">--Instructional technology / distance education</option><option value="750">--International programs</option><option value="751">--Librarians</option><option value="752">--Publishing</option><option value="753">--Research staff / postdocs</option><option value="754">-Institutional administration</option><option value="1001">--Assessment</option><option value="755">--Admissions / registrar</option><option value="756">--Athletics</option><option value="757">--Business / financial management</option><option value="796">--Clerical/administrative support</option><option value="758">--Development / fund raising / alumni affairs</option><option value="797">--Diversity</option><option value="759">--Facilities / auxiliary services / sustainability</option><option value="760">--Financial aid</option><option value="7501">--Health services/medical</option><option value="761">--Human resources</option><option value="762">--Information systems / technology</option><option value="798">--Institutional research</option><option value="763">--Legal affairs</option><option value="764">--Marketing / public relations / government relations</option><option value="799">--Program administration</option><option value="765">--Safety and security</option><option value="770">EXECUTIVE POSITIONS</option><option value="771">-Chief executives / executive directors</option><option value="772">-Deans</option><option value="773">-Presidents / chancellors</option><option value="774">-Provosts / Vice Presidents</option><option value="775">JOBS OUTSIDE HIGHER EDUCATION</option><option value="776">-Consultants / businesses</option><option value="777">-Foundations</option><option value="778">-Government agencies</option><option value="779">-High schools</option><option value="780">-Literary and cultural organizations</option><option value="781">-Lobbying groups</option><option value="782">-Museums</option><option value="1006">-Non-profit organizations/associations</option><option value="801">-Public policy</option><option value="783">-Publishers</option></select>
+            </div>
+            </div>
+            <div class="right-dual">
+            <div class="search-txt4">Job 2</div>
+            <div class="search-box1 height20" style="height:auto;">
+            <div><b>Keywords</b></div>
+            <div><input type="text" class="search-txt-box4"></div>
+            <select class="form-select-dual" multiple="multiple"><option value="710">FACULTY JOBS</option><option value="743">-Career / Vocational Fields</option><option value="711">-Fine and Performing Arts</option><option value="712">-Humanities</option><option value="713">--Classics</option><option value="714">--English literature and composition</option><option value="715">--Ethnic / cultural / gender studies</option><option value="716">--History</option><option value="717">--Languages</option><option value="718">--Philosophy</option><option value="719">--Religion</option><option value="720">-Professions</option><option value="721">--Architecture</option><option value="722">--Business</option><option value="723">--Communication / design / media</option><option value="726">--Health professions</option><option value="724">--Law</option><option value="725">--Library science</option><option value="1002">--Public administration</option><option value="727">--Social work</option><option value="728">-Science / Engineering / Mathematics</option><option value="804">--Agricultural science / extension</option><option value="729">--Biology / life sciences</option><option value="730">--Chemistry / biochemistry</option><option value="731">--Computer Science / Information Technology</option><option value="732">--Engineering</option><option value="1003">--Environmental sciences</option><option value="733">--Mathematics</option><option value="734">--Physical sciences</option><option value="735">-Social Sciences / Education</option><option value="736">--Anthropology / Archaeology</option><option value="800">--Criminal justice</option><option value="737">--Economics</option><option value="738">--Education</option><option value="1004">--Geography</option><option value="1005">--Kinesiology / physical education</option><option value="739">--Linguistics</option><option value="740">--Political science</option><option value="741">--Psychology</option><option value="742">--Sociology / behavioral studies</option><option value="744">ADMINISTRATIVE JOBS</option><option value="766">-Student affairs / student services</option><option value="769">--Counseling</option><option value="767">--Residence life</option><option value="768">--Student activities</option><option value="1009">--Student services</option><option value="745">-Academic administration</option><option value="746">--Academic advising</option><option value="747">--Curriculum development</option><option value="1000">--Department chairs</option><option value="795">--Graduate Education</option><option value="748">--Grants / research administration</option><option value="749">--Instructional technology / distance education</option><option value="750">--International programs</option><option value="751">--Librarians</option><option value="752">--Publishing</option><option value="753">--Research staff / postdocs</option><option value="754">-Institutional administration</option><option value="1001">--Assessment</option><option value="755">--Admissions / registrar</option><option value="756">--Athletics</option><option value="757">--Business / financial management</option><option value="796">--Clerical/administrative support</option><option value="758">--Development / fund raising / alumni affairs</option><option value="797">--Diversity</option><option value="759">--Facilities / auxiliary services / sustainability</option><option value="760">--Financial aid</option><option value="7501">--Health services/medical</option><option value="761">--Human resources</option><option value="762">--Information systems / technology</option><option value="798">--Institutional research</option><option value="763">--Legal affairs</option><option value="764">--Marketing / public relations / government relations</option><option value="799">--Program administration</option><option value="765">--Safety and security</option><option value="770">EXECUTIVE POSITIONS</option><option value="771">-Chief executives / executive directors</option><option value="772">-Deans</option><option value="773">-Presidents / chancellors</option><option value="774">-Provosts / Vice Presidents</option><option value="775">JOBS OUTSIDE HIGHER EDUCATION</option><option value="776">-Consultants / businesses</option><option value="777">-Foundations</option><option value="778">-Government agencies</option><option value="779">-High schools</option><option value="780">-Literary and cultural organizations</option><option value="781">-Lobbying groups</option><option value="782">-Museums</option><option value="1006">-Non-profit organizations/associations</option><option value="801">-Public policy</option><option value="783">-Publishers</option></select>
+            </div>
+            </div>
+            
+             <div class="clear"></div>
+            <div class="search-box1 height20" style="height:auto; margin-top:20px; padding-bottom:20px;">
+            	Within <select size="1" name="dist" id="edit-dist" class="container-inline form-select"><option selected="selected" value="5">5 Miles</option><option value="10">10 Miles</option><option value="25">25 Miles</option><option value="50">50 Miles</option><option value="100">100 Miles</option><option value="250">250 Miles</option><option value="">Any distance</option></select> <a href="#" class="btn">Search</a>
+            </div>
+            		</div>
+        </div>
+        
+        <!-- advanced search end-->
+                     </div>
+
+	
+
+                </div>
+                <div class="pagination">
+                <div class="count-main-wrap">
+                <div class="show-job">Showing jobs 51 – 100 of 500.</div>
+                <div class="count-job">Show <select class="page-count"><option value="5">5</option><option value="10">10</option><option selected="selected" value="25">25</option><option value="50">50</option><option value="75">75</option><option value="100">100</option></select> per page</div>
+                </div>
+                <div class="clear"></div>
+                	<div id="demo1"></div>                  
+                
+                </div>
+         		<div id="wrapper">
+		<div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Academic Success Coordinator</a>
+        <p>Ira A. Fulton School of Engineering,Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Tempe campus</div>
+        <div><b>Job Category:</b>Ira A. Fulton School of Engineering</div>
+        <div><b>Posted:</b><span>03/25/2013</span></div>
+        <p>The School for Engineering of Matter, Transport and Energy in the Ira A. Fulton School of Engineering is seeking a full-time Academic Success Coordinator.  This position is part of the academic services team that supports student recruitment, academic advising, and retention services to prospective and current students.  This position works specifically with Masters and PhD. programs in Aerospace Engineering, Chemical Engineering, Materials Science and Engineering, and Mechanical Engineering.  Some responsibilities of this position include, but are not limited to: </p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Disability ADA Consultant</a>
+        <p>The Office of Human Resources - Office of Equity and Inclusion,Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Tempe campus</div>
+        <div><b>Job Category:</b>The Office of Human Resources - Office of Equity and Inclusion</div>
+        <div><b>Posted:</b><span>03/25/2013</span></div>
+        <p>Provides consultative services to departments, faculty, staff and University programs to ensure compliance with government regulations, such as ADA, Sections 503 and 504 of the Rehabilitation Act and ASU policies.  Facilitates the interactive process between department and employee to determine if a reasonable accommodation of the employee's disability can be made.  Educates departments on the ADA and minimizes their financial costs by facilitating return to work and appropriate accommodations.  Reports to Office of Equity and Inclusion.  </p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">WPC Development Coordinator</a>
+        <p>WPC Development Coordinator, Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Tempe campus</div>
+        <div><b>Job Category:</b>WPC Development Coordinator</div>
+        <div><b>Posted:</b><span>03/25/2013</span></div>
+        <p>The W. P. Carey School of Business Office of Development is a highly visible, professional and energetic work environment looking for someone who has the ability to accomplish results when coordinating and implementing detailed planning, services and activities associated with the school's development and fund raising events and activities. </p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Accounting Specialist</a>
+        <p>Facilities Development and Management, Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Tempe campus</div>
+        <div><b>Job Category:</b>Facilities Development and Management</div>
+        <div><b>Posted:</b><span>03/22/2013</span></div>
+        <p>Facilities Development and Management, Capital Programs Management Group, seeks an Accounting Specialist to perform professional specialized accounting activities. Will be responsible for various accounts payable processes which call for strong decision-making and problem solving skills. Reconcile and analyze project financial records. Verify transactions comply with financial policies and procedures. Provide fiscal guidance to departmental staff and construction project managers. Provide problem solving resolution on complex accounting issues. Research financial postings using Advantage, Brio, and internal databases. Prepare requisitions, invoices, payment vouchers, payment applications, purchase order modification requests and internal purchase orders. Maintain document tracking system in internal database. Ability to work independently with flexibility to manage shifting and multiple priorities. Utilize analytical and communication skills, both written and verbal.
+</p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Academic Financial Specialist Senior</a>
+        <p>Fulton Schools of Engineering, Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Tempe campus</div>
+        <div><b>Job Category:</b>Fulton Schools of Engineering</div>
+        <div><b>Posted:</b><span>03/22/2013</span></div>
+        <p>The Ira A. Fulton Schools of Engineering has an opening for an Academic Financial Specialist, Sr. in the Dean's Office Business Administration.  Under limited supervision, this position will manage and control the daily financial operations of the Engineering Dean¿s Office, be responsible for account management, budget development and maintenance; prepares budget projection in STAR and analyses;  approve payments; processes Travel.  Has oversight of payroll reconciliation, serve as the department time administrator, and assists with Human Resource Payroll adjustments.  Manages faculty startup, prepare financial and administrative reports, interprets and applies pertinent rules, regulations, policies and procedures set forth by university or other governing agency; develops and implements procedures for daily operations of assigned functions according to established policies; prepares and updates internal manuals, and supervises of two subordinates.</p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Systems Analyst Associate</a>
+        <p>Office/Exec Vp/Provost Of Univ, Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Tempe campus</div>
+        <div><b>Job Category:</b>Office/Exec Vp/Provost Of Univ</div>
+        <div><b>Posted:</b><span>03/22/2013</span></div>
+        <p>Provides support to users of information technology tools. Work typically involves a combination of providing information technology service and support, preparing and delivering information technology instruction, using software applications to meet specialized needs, troubleshooting technology hardware and software, and communicating with customers, other technology specialists and vendors about services. </p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Associate Director Career Services - Engineering</a>
+        <p>ENGR Career Center, Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Tempe campus</div>
+        <div><b>Job Category:</b>ENGR Career Center</div>
+        <div><b>Posted:</b><span>03/22/2013</span></div>
+        <p>Under administrative direction, performs work of considerable difficulty assisting the Director in planning, staffing, and managing the day-to-day operations of the Fulton Schools of Engineering Career Center.  The Career Center and staff provide direction and guidance for a range of career services for undergraduate and graduate students including outcomes assessment, experiential education, entry-level job identification, career education, recruiting services, strategic communications, and information systems.  This position reports to the Director of Career Services who reports directly to the Associate Dean for Academic and Student Affairs. </p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Nurse Practitioner - PRN</a>
+        <p>CONHI NP Healthcare, Downtown campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Downtown campus</div>
+        <div><b>Job Category:</b>CONHI NP Healthcare</div>
+        <div><b>Posted:</b><span>03/22/2013</span></div>
+        <p>Master's degree with a major in Nursing or health related area from a State Board of Nursing approved school of nursing with satisfactory completion of an approved Nurse Practitioner program AND currently licensed to practice nursing in the State of Arizona AND certified as a Nurse Practitioner by the State Board of Nursing; OR, any equivalent combination of experience and/or education from which comparable knowledge, skills and abilities have been achieved. </p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Accountant Senior</a>
+        <p>FS Debt Svc Plant Funds, Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Tempe campus</div>
+        <div><b>Job Category:</b>CONHI NP Healthcare</div>
+        <div><b>Posted:</b><span>03/21/2013</span></div>
+        <p>Financial Services seeks an Accountant Senior to provide accounting oversight for the Debt and Plant Accounting area:  Performs a broad scope of professional financial accounting activities requiring strong decision making skills and ability to work independently.  Performs accounting functions including preparation and review of annual audit work papers, monthly financial reports, bank statements, journal entries, ad hoc financial reports.  Provides interpretation of financial data, account analysis, and solutions to problems and recommends changes to accounting procedures utilizing knowledge of accounting principles and practices.</p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Administrative Associate</a>
+        <p>Disability Resources, Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Tempe campus</div>
+        <div><b>Job Category:</b>Disability Resources</div>
+        <div><b>Posted:</b><span>03/21/2013</span></div>
+        <p>The Administrative Associate is responsible for coordinating accounting, budgeting, auditing and other financial related functions, to ensure the financial integrity of the Disability Resource Center (DRC). The Administrative Associate also oversees all personnel and operational matters and provides administrative support to the Director of the DRC.</p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Director, Student Recruitment</a>
+        <p>MLFTC Student Services T, Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Tempe campus</div>
+        <div><b>Job Category:</b>MLFTC Student Services T</div>
+        <div><b>Posted:</b><span>03/21/2013</span></div>
+        <p> Mary Lou Fulton Teachers College seeks a dynamic leader to oversee and enhance the student recruitment function at all campuses for the College. Assesses current practices, advises other functional areas of education regarding the latest research on student recruitment; incorporates emerging recruiting techniques and technologies, and implements programs and directs revisions as needed; develops, implements and modifies strategic graduate and undergraduate student recruitment plan for concurrent multiple semesters under direction of Dean of MLF Teachers College; collaborates with undergraduate and graduate Admissions, Advisement and Retention to ensure maximum accuracy and consistency in communications efforts to students; directs college-wide recruitment activities and implements and evaluates college/department/school student-focused initiatives</p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Specialist - CART: Deaf/Hard of Hearing Services</a>
+        <p>Disability Resources, Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Tempe campus</div>
+        <div><b>Job Category:</b>Disability Resources</div>
+        <div><b>Posted:</b><span>03/21/2013</span></div>
+        <p>Under general supervision, the Communication Access Real-Time Transcription (CART) Specialist plans, organizes, and coordinates activities, functions, and programs in accordance with priorities, time limitations, funding limitations or other specifications.  The Deaf/Hard of Hearing Services CART Specialist coordinates Communication Access Real-Time Transcription (CART) services on a day-to-day basis to ensure that effective services for online audio materials and in-class materials are accessible for students who are Deaf/Hard of Hearing</p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Program Coordinator</a>
+        <p>College of Law, Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Tempe campus</div>
+        <div><b>Job Category:</b>College of Law</div>
+        <div><b>Posted:</b><span>03/20/2013</span></div>
+        <p>The Sandra Day O'Connor College of Law seeks a dynamic individual to support the Communications Office.  The successful candidate will report to the Director of Print Publications, and execute a variety of office administrative and/or secretarial support including but not limited to:</p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Office Specialist Senior</a>
+        <p>Undergraduate Admissions, Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Tempe campus</div>
+        <div><b>Job Category:</b>Undergraduate Admissions</div>
+        <div><b>Posted:</b><span>03/20/2013</span></div>
+        <p>The Office of Undergraduate Admissions seeks to fill the position of Office Specialist Senior. Under the direction of the Frontline Office Supervisor, this position serves as assistant supervisor of frontline staff, and performs a variety of administrative, skilled and technical work within the Office of Undergraduate Admissions.</p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Office Specialist - Downtown Parking & Transit Services</a>
+        <p>Parking & Transit Service, Downtown campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Downtown campus</div>
+        <div><b>Job Category:</b>Parking & Transit Service</div>
+        <div><b>Posted:</b><span>03/20/2013</span></div>
+        <p>Parking and Transit Services within University Business Services seeks an Office Specialist at the Downtown campus to: provide information and guidance to customers both in person and on the phone; process permit sales applications, on-line orders, bus passes, temporary permits and other materials; prepare basic correspondence, informational packets and other materials for mailings; handle cash and prepare deposits; respond to email inquiries concerning department policy and procedures related to parking on campus; coordinate information and maintain various logs, files and reports; assist supervisor with quarterly and annual processes</p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Multi-Media Program Coordinator - University Business Services / PTS</a>
+        <p>Parking & Transit Service, Tempe campus</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Downtown campus</div>
+        <div><b>Job Category:</b>Parking & Transit Service</div>
+        <div><b>Posted:</b><span>03/19/2013</span></div>
+        <p>Parking and Transit Services within University Business Services seeks a Multi-Media Program Coordinator.  Under general direction, plans, develops, produces and disseminates a variety of web-based and interactive marketing projects and programs on behalf of University Business Services for a variety of audiences within the campus community. Duties and Responsibilities include production of audio and video films, photography, live streaming web broadcasts and live audio production; assists with web development projects via a content management system and assists with web postings and E-mail campaigns; plays a key role in social media management; performs other duties and responsibilities as assigned</p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        <div class="accordionButton">
+        <img src="/assets/job-img.jpg">
+        <a href="#">Research Advancement Accountant</a>
+        <p>CTI Business Research Services, Polytechnic (Mesa)</p>
+        </div>
+		<div class="accordionContent">
+        <div><b>Job Location:</b>Polytechnic (Mesa)</div>
+        <div><b>Job Category:</b>CTI Business Research Services</div>
+        <div><b>Posted:</b><span>03/19/2013</span></div>
+        <p>Under supervision of the Research Advancement Manager, the Research Advancement Accountant performs fund management and accounting activities for the College of Technology and Innovation's Business and Research Services to ensure ongoing adherence with established policies, regulations, requirements and standards of the University and sponsoring source. </p>
+        <a href="#" class="btn2">View More</a>
+        </div>
+        
+        
+	</div>	
+    <!--<div id="demo2"></div> -->
+               </div>
+               <div class="center-right">
+                    <div class="search-box">
+                        <span><a href="register-employer.html" class="btn-reg">Login</a></span><span style="color:#fff;">or</span>
+                        <span><a href="register-employer.html" class="btn-reg">Register</a></span>
+                    </div>
+                    <div class="clear height10"></div>
+                    <div class="search-box">
+                        <span class="hiring">Hiring?</span><a href="register-employer.html"><img src="/assets/post_job_btn.png"></a>
+                        <div class="learn-wrap">
+                        <a href="learn-more.html" class="learn">Learn More</a>
+                        <a href="rates.html" class="learn">Our Rates</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    
+                    <div class="ad">
+                    	<img src="/assets/ad_right.jpg">
+                    </div>
+                    <div class="box-content1">
+                        	<h2>Financial Aid & Bursar</h2>
+                            <ul>
+                            <li>
+                            <h6>Awards Recognize Student Loan Default | Prevention And Financial Literacy Programs</h6>
+                            <p>INDIANAPOLIS - USA Funds® has announced the recipients of its 2012 Excellence in Debt Management Awards. <a href="#"> More</a></p>
+                           </li>
+                            <li>
+                            <h6>Tuition paid in ones</h6>
+                            <p>In a YouTube video Nicolaus Ramos, a U of Colorado student from Sacramento, explains why he paid his $14,309 tuition bill with 30 pounds of one-dollar bills. <a href="#"> More</a></p>
+                            </li>
+                            <li class="last">
+                            <h6>Heading off the college tab</h6>
+                            <p>Ken Clark, author of “The Complete Idiot’s Guide to Paying for College”, reduces how to pay for college to one simple rule: “Plan on putting away $75 per kid per month from the day they’re born, and that will get you four years at a state school.”<a href="#"> More</a></p>
+                           </li>
+                            </ul>
+                            </div>
+                            
+                            <div class="ad">
+                                <img src="/assets/ad_right1.jpg">
+                            </div>
+                            <div class="box-content1">
+                        	<h2>Student Loan Intelligence</h2>
+                          <ul>
+                            <li class="last">	
+                            <h6>One common peculiarity among U.S. student loans</h6>
+                            <p>For all U.S. student loans - government and private - a borrower has no bankruptcy protection.<a href="#"> More</a></p>
+                            </li>
+                           </ul> 
+                        </div>
+               </div>
+               
+             </div>
+		</article>
+<!-- / content -->
+<div class="clear"></div>
+	</div>
+</div>
+    <!-- footer -->
+		<%= render "layouts/footer"%>
+<!-- / footer -->
+<script type='text/javascript' src='/assets/jquery.js'></script>
+<script type='text/javascript' src='/assets/jquery.simplemodal.js'></script>
+<script type='text/javascript' src='/assets/basic.js'></script>
+
+<script src="/assets/jquery-1.3.2.js" type="text/javascript"></script>
+<script src="/assets/jquery.paginate.js" type="text/javascript"></script>
+<script type="text/javascript">
+		$(function() {
+			$("#demo1").paginate({
+				count 		: 100,
+				start 		: 1,
+				display     : 8,
+				border					: true,
+				border_color			: '#fff',
+				text_color  			: '#fff',
+				background_color    	: 'black',	
+				border_hover_color		: '#ccc',
+				text_hover_color  		: '#000',
+				background_hover_color	: '#fff', 
+				images					: false,
+				mouse					: 'press'
+			});
+		});
+		</script>
+</body>
+</html>
